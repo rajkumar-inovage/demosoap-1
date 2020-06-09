@@ -12,6 +12,10 @@ import s1 from "../assets/img/s1.jpg"
 import s2 from "../assets/img/s2.jpg"
 import s3 from "../assets/img/s3.jpg"
 import s4 from "../assets/img/s4.jpg"
+import s1thumb from "../assets/img/s1-thumb.jpg";
+import s3thumb from "../assets/img/s3-thumb.jpg";
+import s2thumb from "../assets/img/s2-thumb.jpg";
+import s4thumb from "../assets/img/s4-thumb.jpg";
 import classnames from 'classnames'
 import {
   TabContent,
@@ -56,7 +60,7 @@ const IndexPage = ({ data }) => {
                   style={{
                     top: "50%",
                     left: "50%",
-                    transform: "translate(-50%,-50%)"
+                    transform: "translate(-50%,-50%)",
                   }}
                 >
                   <h1 className="josefin-sans-b" style={{ fontSize: "1.8rem" }}>
@@ -108,70 +112,70 @@ const IndexPage = ({ data }) => {
         <Container>
           <Row className="mx-0">
             <div className="w-100">
-                  <div className="tab-outer d-block d-md-inline-flex w-100">
-                    <h2
-                      className="josefin-sans-b mb-3 col-12 col-md-5 col-lg-6"
-                      style={{ fontSize: "2.5rem", color: "#000" }}
+              <div className="tab-outer d-block d-md-inline-flex w-100">
+                <h2
+                  className="josefin-sans-b mb-3 col-12 col-md-5 col-lg-6"
+                  style={{ fontSize: "2.5rem", color: "#000" }}
+                >
+                  Our Collections
+                </h2>
+                <Nav
+                  tabs
+                  className="px-0 col-12 col-md-7 col-lg-6 m-0 text-center tab-menu d-block no-border"
+                >
+                  <NavItem className="d-inline-block">
+                    <NavLink
+                      className={classnames({ active: activeTab === "1" })}
+                      onClick={() => {
+                        toggle("1");
+                      }}
+                      style={{
+                        fontSize: "1.7rem",
+                        textAlign: "center",
+                        fontFamily: "josefinSans-Bold",
+                        fontWeight: 1000,
+                      }}
                     >
-                      Our Collections
-                    </h2>
-                    <Nav
-                      tabs
-                      className="px-0 col-12 col-md-7 col-lg-6 m-0 text-center tab-menu d-block no-border"
+                      Essentials
+                    </NavLink>
+                  </NavItem>
+                  <NavItem className="d-inline-block">
+                    <NavLink
+                      className={classnames({ active: activeTab === "2" })}
+                      onClick={() => {
+                        toggle("2");
+                      }}
+                      style={{
+                        fontSize: "1.7rem",
+                        textAlign: "center",
+                        fontFamily: "josefinSans-Bold",
+                        fontWeight: 1000,
+                      }}
                     >
-                      <NavItem className="d-inline-block">
-                        <NavLink
-                          className={classnames({ active: activeTab === '1' })}
-                          onClick={() => {
-                            toggle('1')
-                          }}
-                          style={{
-                            fontSize: '1.7rem',
-                            textAlign: 'center',
-                            fontFamily: 'josefinSans-Bold',
-                            fontWeight: 1000,
-                          }}
-                        >
-                          Essentials
-                        </NavLink>
-                      </NavItem>
-                      <NavItem className="d-inline-block">
-                        <NavLink
-                          className={classnames({ active: activeTab === '2' })}
-                          onClick={() => {
-                            toggle('2')
-                          }}
-                          style={{
-                            fontSize: '1.7rem',
-                            textAlign: 'center',
-                            fontFamily: 'josefinSans-Bold',
-                            fontWeight: 1000,
-                          }}
-                        >
-                          Donuts
-                        </NavLink>
-                      </NavItem>
-                      <NavItem className="d-inline-block">
-                        <NavLink
-                          className={classnames({ active: activeTab === '3' })}
-                          onClick={() => {
-                            toggle('3')
-                          }}
-                          style={{
-                            fontSize: '1.7rem',
-                            textAlign: 'center',
-                            fontFamily: 'josefinSans-Bold',
-                            fontWeight: 1000,
-                          }}
-                        >
-                          Bath Bombs
-                        </NavLink>
-                      </NavItem>
-                    </Nav>
-                  </div>
+                      Donuts
+                    </NavLink>
+                  </NavItem>
+                  <NavItem className="d-inline-block">
+                    <NavLink
+                      className={classnames({ active: activeTab === "3" })}
+                      onClick={() => {
+                        toggle("3");
+                      }}
+                      style={{
+                        fontSize: "1.7rem",
+                        textAlign: "center",
+                        fontFamily: "josefinSans-Bold",
+                        fontWeight: 1000,
+                      }}
+                    >
+                      Bath Bombs
+                    </NavLink>
+                  </NavItem>
+                </Nav>
+              </div>
               <TabContent className="pt-3 pt-lg-5" activeTab={activeTab}>
                 <TabPane tabId="1">
-                    <Essentials />
+                  <Essentials />
                 </TabPane>
                 <TabPane tabId="2">
                   <Donut />
@@ -250,66 +254,90 @@ const IndexPage = ({ data }) => {
           </Row>
         </Container>
       </section>
-      
+
       <section className="py-3 py-lg-5">
         <RecentBlogs />
       </section>
       <section className="pt-3 pt-lg-5">
-          <Row className="mx-0">
-            <div className="col-12 col-md-6 col-lg-3 position-relative px-0 outer">
-              <a href="https://demosoap.com/#0-insta-feed">
-                <img src={s1} alt="" width="100%" className="m-0" />
-                <div className="layer">
-                  <div className="layer-content">
-                    <i
-                      className="fa fa-play text-white"
-                      style={{ fontSize: '1.3rem' }}
-                    ></i>
-                  </div>
+        <Row className="mx-0">
+          <div className="col-12 col-md-6 col-lg-3 position-relative px-0 outer">
+            <a href={s1}>
+              <img
+                src={s1thumb}
+                alt=""
+                width="341"
+                height="341"
+                className="m-0"
+              />
+              <div className="layer">
+                <div className="layer-content">
+                  <i
+                    className="fa fa-play text-white"
+                    style={{ fontSize: "1.3rem" }}
+                  ></i>
                 </div>
-              </a>
-            </div>
-            <div className="col-12 col-md-6 col-lg-3 position-relative px-0 outer">
-              <a href="https://demosoap.com/#1-insta-feed">
-                <img src={s2} alt="" width="100%" className="m-0" />
-                <div className="layer">
-                  <div className="layer-content">
-                    <i
-                      className="fa fa-instagram text-white"
-                      style={{ fontSize: '1.3rem' }}
-                    ></i>
-                  </div>
+              </div>
+            </a>
+          </div>
+          <div className="col-12 col-md-6 col-lg-3 position-relative px-0 outer">
+            <a href={s2}>
+              <img
+                src={s2thumb}
+                alt=""
+                width="341"
+                height="341"
+                className="m-0"
+              />
+              <div className="layer">
+                <div className="layer-content">
+                  <i
+                    className="fa fa-instagram text-white"
+                    style={{ fontSize: "1.3rem" }}
+                  ></i>
                 </div>
-              </a>
-            </div>
-            <div className="col-12 col-md-6 col-lg-3 position-relative px-0 outer">
-              <a href="https://demosoap.com/#2-insta-feed">
-                <img src={s3} alt="" width="100%" className="m-0" />
-                <div className="layer">
-                  <div className="layer-content">
-                    <i
-                      className="fa fa-instagram text-white"
-                      style={{ fontSize: '1.3rem' }}
-                    ></i>
-                  </div>
+              </div>
+            </a>
+          </div>
+          <div className="col-12 col-md-6 col-lg-3 position-relative px-0 outer">
+            <a href={s3}>
+              <img
+                src={s3thumb}
+                alt=""
+                width="341"
+                height="341"
+                className="m-0"
+              />
+              <div className="layer">
+                <div className="layer-content">
+                  <i
+                    className="fa fa-instagram text-white"
+                    style={{ fontSize: "1.3rem" }}
+                  ></i>
                 </div>
-              </a>
-            </div>
-            <div className="col-12 col-md-6 col-lg-3 position-relative px-0 outer">
-              <a href="https://demosoap.com/#3-insta-feed">
-                <img src={s4} alt="" width="100%" className="m-0" />
-                <div className="layer">
-                  <div className="layer-content">
-                    <i
-                      className="fa fa-instagram text-white"
-                      style={{ fontSize: '1.3rem' }}
-                    ></i>
-                  </div>
+              </div>
+            </a>
+          </div>
+          <div className="col-12 col-md-6 col-lg-3 position-relative px-0 outer">
+            <a href={s1}>
+              <img
+                src={s4thumb}
+                alt=""
+                width="341"
+                height="341"
+                className="m-0"
+              />
+              <div className="layer">
+                <div className="layer-content">
+                  <i
+                    className="fa fa-instagram text-white"
+                    style={{ fontSize: "1.3rem" }}
+                  ></i>
                 </div>
-              </a>
-            </div>
-          </Row>
-        </section>
+              </div>
+            </a>
+          </div>
+        </Row>
+      </section>
     </>
   );
 };
