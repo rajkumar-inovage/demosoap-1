@@ -33,13 +33,13 @@ module.exports = {
         "~": path.join(__dirname, "src/"),
       },
     },
-    // {
-    //   resolve: "gatsby-plugin-tidio-chat",
-    //   options: {
-    //     tidioKey: process.env.TIDIOKEY,
-    //     enableDuringDevelop: true,
-    //   },
-    // },
+    {
+      resolve: "gatsby-plugin-tidio-chat",
+      options: {
+        tidioKey: process.env.TIDIOKEY,
+        enableDuringDevelop: false,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
