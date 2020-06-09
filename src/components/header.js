@@ -9,7 +9,8 @@ import {
   faUser,
   faSearch,
 } from "@fortawesome/free-solid-svg-icons";
-import logo from "../assets/img/demosoap-logo.webp";
+import logo from "../assets/img/demosoap-logo_x100.png";
+import stickyLogo from "../assets/img/demosoap-logo_x70.png";
 import {
   Container,
   Row,
@@ -97,7 +98,10 @@ const Header = ({ siteTitle }) => {
   return (
     <>
       <header>
-        <div className="fixed-header w-100 m-0 position-fixed bg-white" style={{zIndex:'99'}}>
+        <div
+          className="fixed-header w-100 m-0 position-fixed bg-white"
+          style={{ zIndex: "99" }}
+        >
           <p
             className="text-center josefin-sans-sb primary-color p-2"
             style={{ fontSize: "1.4rem" }}
@@ -117,7 +121,13 @@ const Header = ({ siteTitle }) => {
                 className="has-text-black has-text-weight-bold"
                 to="/"
               >
-                <img src={logo} alt="" className="img-fluid" />
+                <img
+                  src={logo}
+                  alt=""
+                  width="100"
+                  height="100"
+                  className="img-fluid"
+                />
               </Link>
             </div>
             <NavbarToggler
@@ -343,7 +353,14 @@ const Header = ({ siteTitle }) => {
                 className="has-text-black has-text-weight-bold"
                 to="/"
               >
-                <img src={logo} alt="" className="img-fluid" style={{width:'75px'}}/>
+                <img
+                  src={stickyLogo}
+                  alt=""
+                  width="70"
+                  height="70"
+                  className="img-fluid"
+                  style={{ width: "75px" }}
+                />
               </Link>
             </div>
             <NavbarToggler
