@@ -5,7 +5,6 @@ import $ from "jquery";
 import StoreContext from "~/context/store";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faShoppingBag,
   faUser,
   faSearch,
 } from "@fortawesome/free-solid-svg-icons";
@@ -13,8 +12,6 @@ import logo from "../assets/img/demosoap-logo_x100.png";
 import stickyLogo from "../assets/img/demosoap-logo_x70.png";
 import {
   Container,
-  Row,
-  Col,
   Collapse,
   Navbar,
   NavbarToggler,
