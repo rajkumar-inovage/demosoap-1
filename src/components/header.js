@@ -3,11 +3,6 @@ import PropTypes from "prop-types";
 import React, { useContext, useState, useEffect } from "react";
 import $ from "jquery";
 import StoreContext from "~/context/store";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faUser,
-  faSearch,
-} from "@fortawesome/free-solid-svg-icons";
 import logo from "../assets/img/demosoap-logo_x100.png";
 import stickyLogo from "../assets/img/demosoap-logo_x70.png";
 import {
@@ -50,6 +45,7 @@ const Header = ({ siteTitle }) => {
     }
   };
     const handleRemove = (event, lineItemId) => {
+      event.preventDefault();
       removeLineItem(client, checkout.id, lineItemId).then(() => {
         setCartCount(cartCount - 1);
       });
@@ -114,7 +110,8 @@ const Header = ({ siteTitle }) => {
           <Container>
             <div className="navbar-start m-0 logo-box mt-3">
               <Link
-                aria-label="search"
+                aria-label={siteTitle}
+                title={siteTitle}
                 className="has-text-black has-text-weight-bold"
                 to="/"
               >
@@ -209,14 +206,13 @@ const Header = ({ siteTitle }) => {
                     <span
                       className="has-text-dark is-size-5"
                       onClick={openSearchBar}
-                      icon={faSearch}
                     >
                       <i className="fa fa-search" aria-hidden="true"></i>
                     </span>
                   </div>
                   <div className="navbar-item d-inline-block">
                     <Link aria-label="cart" to="/account/login">
-                      <span icon={faUser} className="is-size-5 has-text-dark">
+                      <span className="is-size-5 has-text-dark">
                         <i
                           className="fa fa-user-circle-o"
                           aria-hidden="true"
@@ -346,7 +342,8 @@ const Header = ({ siteTitle }) => {
           <Container>
             <div className="navbar-start m-0 logo-box mt-0">
               <Link
-                aria-label="search"
+                aria-label={siteTitle}
+                title={siteTitle}
                 className="has-text-black has-text-weight-bold"
                 to="/"
               >
@@ -442,14 +439,13 @@ const Header = ({ siteTitle }) => {
                     <span
                       className="has-text-dark is-size-5"
                       onClick={openSearchBar}
-                      icon={faSearch}
                     >
                       <i className="fa fa-search" aria-hidden="true"></i>
                     </span>
                   </div>
                   <div className="navbar-item d-inline-block">
                     <Link aria-label="cart" to="/account/login">
-                      <span icon={faUser} className="is-size-5 has-text-dark">
+                      <span className="is-size-5 has-text-dark">
                         <i
                           className="fa fa-user-circle-o"
                           aria-hidden="true"
@@ -591,7 +587,7 @@ const Header = ({ siteTitle }) => {
                     aria-label="Search"
                   />
                   <span className="icon is-right">
-                    <FontAwesomeIcon icon={faSearch} />
+                    <i className="fa fa-search" aria-hidden="true"></i>
                   </span>
                   <label className="has-text-white w-100 text-center mt-3 josefin-sans-sb">
                     ENTER ↵

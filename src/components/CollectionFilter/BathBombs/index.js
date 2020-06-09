@@ -82,7 +82,6 @@ const BathBombs = () => {
                             )}
 
                           <div className="add-to-cart d-inline w-auto p-0">
-                
                             <button
                               className="josefin-sans-b cart-btn border border-dark btns position-relative"
                               style={{ fontSize: "0.8rem" }}
