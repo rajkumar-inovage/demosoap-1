@@ -27,8 +27,10 @@ const Essentials = () => {
               altText
               localFile {
                 childImageSharp {
-                  fluid {
+                  fluid(maxWidth: 186) {
                     src
+                    presentationWidth
+                    presentationHeight
                   }
                 }
               }
@@ -67,12 +69,19 @@ const Essentials = () => {
                                 src={
                                   images[0].localFile.childImageSharp.fluid.src
                                 }
-                                alt=""
+                                alt={images[0].altText ? images[0].altText : ""}
+                                width={
+                                  images[0].localFile.childImageSharp.fluid
+                                    .presentationWidth
+                                }
+                                height={
+                                  images[0].localFile.childImageSharp.fluid
+                                    .presentationHeight
+                                }
                               />
                             )}
 
                           <div className="add-to-cart d-inline w-auto p-0">
-
                             <button
                               className="josefin-sans-b cart-btn border border-dark btns position-relative"
                               style={{ fontSize: "0.8rem" }}

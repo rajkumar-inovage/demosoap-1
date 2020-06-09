@@ -27,8 +27,10 @@ const BathBombs = () => {
               altText
               localFile {
                 childImageSharp {
-                  fluid {
+                  fluid(maxWidth: 186) {
                     src
+                    presentationWidth
+                    presentationHeight
                   }
                 }
               }
@@ -67,7 +69,15 @@ const BathBombs = () => {
                                 src={
                                   images[0].localFile.childImageSharp.fluid.src
                                 }
-                                alt=""
+                                alt={images[0].altText ? images[0].altText : ""}
+                                width={
+                                  images[0].localFile.childImageSharp.fluid
+                                    .presentationWidth
+                                }
+                                height={
+                                  images[0].localFile.childImageSharp.fluid
+                                    .presentationHeight
+                                }
                               />
                             )}
 

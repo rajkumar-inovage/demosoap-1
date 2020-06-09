@@ -318,7 +318,7 @@ const IndexPage = ({ data }) => {
             </a>
           </div>
           <div className="col-12 col-md-6 col-lg-3 position-relative px-0 outer">
-            <a href={s1}>
+            <a href={s4}>
               <img
                 src={s4thumb}
                 alt=""
@@ -343,3 +343,42 @@ const IndexPage = ({ data }) => {
 };
 
 export default IndexPage;
+
+export const query = graphql`
+  query {
+    allShopifyProduct(limit: 8, skip: 1) {
+      edges {
+        node {
+          id
+          title
+          handle
+          createdAt(fromNow: true)
+          publishedAt
+          productType
+          vendor
+          priceRange {
+            maxVariantPrice {
+              amount
+            }
+          }
+          images {
+            originalSrc
+            id
+            localFile {
+              childImageSharp {
+                fluid(maxWidth: 186) {
+                  ...GatsbyImageSharpFluid_noBase64
+                }
+              }
+            }
+          }
+          variants {
+            id
+            title
+            price
+          }
+        }
+      }
+    }
+  }
+`;
