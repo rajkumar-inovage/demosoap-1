@@ -57,7 +57,7 @@ const AddAddressForm = () => {
         className="button is-dark"
         onClick={() => setAddAdressForm(!addAdressForm)}
       >
-        Add a new adress
+        Add a new address
       </button>
       {addAdressForm && (
         <div className="columns is-centered">
