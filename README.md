@@ -2,7 +2,7 @@
 <h1 align="center">
 <img alt="Gatsby" src="src/assets/img/demosoap-logo.png" height="60px" />
 <br/>
-Demosoap WP/Shopify Beeta
+Demosoap WP/Shopify Beta
 </h1>
 
 ## 💎 Features
