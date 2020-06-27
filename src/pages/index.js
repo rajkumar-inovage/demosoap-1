@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import SEO from "../components/seo";
 import { Link, graphql } from "gatsby";
 import ProductList from "../components/recentProduct";
-import banner from "../assets/img/soap.jpg";
+import banner from "../assets/img/first_slide.webp";
 import shop from "../assets/img/shop.jpg";
 import RecentBlogs from "../components/RecentBlogs";
 import Essentials from "../components/CollectionFilter/Essentials";
@@ -40,35 +40,27 @@ const IndexPage = ({ data }) => {
       <SEO title="Home" />
       <section className="banner-section">
         <div className="home-banner">
-          <Container>
-            <Row className="mx-0 text-center pt-3 pt-lg-4">
-              <h3
-                className="josefin-sans-b primary-color w-100"
-                style={{ fontSize: "1.6rem" }}
-              >
-                Now offering curbside pick-up & next day GTA deliveries
-              </h3>
-            </Row>
+          <Container> 
             <div
-              className="home-slider row mx-0"
+              className="home-slider row mx-0 mt-5"
               style={{ backgroundImage: `url(${banner})` }}
             >
               <div className="slider-content">
                 <div className="button-box"></div>
                 <div
-                  className="bg-white slider-content-box josefin-sans text-center p-3 rounded p-lg-5 col-11 col-md-10 col-lg-5 mx-auto position-absolute"
+                  className="bg-secondary slider-content-box josefin-sans text-center p-3 rounded p-lg-4 col-11 col-md-10 col-lg-8 mx-auto position-absolute"
                   style={{
                     top: "50%",
                     left: "50%",
                     transform: "translate(-50%,-50%)",
                   }}
                 >
-                  <h1 className="josefin-sans-b" style={{ fontSize: "1.8rem" }}>
-                    Handcrafted & locally made!
+                  <h1 className="josefin-sans-b primary-color" style={{ fontSize: "2rem" }}>
+                    100% Handcrafted & locally made!
                   </h1>
                   <div className="slider-inner-content px-4">
                     <p style={{ fontSize: "1.3rem" }}>
-                      We create uniquely designed soaps with minimal and ethical
+                      We create uniquely designed soaps with organic natural and ethical
                       ingredients
                     </p>
                     <div className="btn-box mt-4">

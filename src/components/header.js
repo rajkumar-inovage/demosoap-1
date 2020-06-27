@@ -97,15 +97,15 @@ const Header = ({ siteTitle }) => {
         >
           <p
             className="text-center josefin-sans-sb primary-color p-2"
-            style={{ fontSize: "1.4rem" }}
+            style={{ fontSize: "1rem" }}
           >
-            Free local shipping within the GTA for orders over $45
+            Now offering curbside pick-up | Free next day local shipping within the GTA for orders over $45 | We ship all over Canada
           </p>
         </div>
         <Navbar
           light={true}
           expand="lg"
-          className="bg-transparent px-3 py-sm-0 py-md-3 default-header"
+          className="bg-transparent px-3 py-sm-0 default-header pt-0"
         >
           <Container>
             <div className="navbar-start m-0 logo-box mt-3">
