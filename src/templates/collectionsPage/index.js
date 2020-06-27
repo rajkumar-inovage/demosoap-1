@@ -298,7 +298,7 @@ const CollectionsPage = ({ data }) => {
                             >
                               <h3
                                 className=""
-                                style={{ fontSize: "1.8rem", color: "#000" }}
+                                style={{ fontSize: "1.4rem", color: "#000" }}
                               >
                                 {title}
                               </h3>

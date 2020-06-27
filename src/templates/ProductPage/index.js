@@ -370,9 +370,8 @@ const ProductPage = ({ data }) => {
                     }}
                     style={{
                       fontSize: "2rem",
-                      textAlign: "center",
-                      fontFamily: "josefinSans-Bold",
-                      fontWeight: 1000,
+                      textAlign: "center", 
+                      fontWeight: 600,
                     }}
                   >
                     Description
@@ -386,9 +385,8 @@ const ProductPage = ({ data }) => {
                     }}
                     style={{
                       fontSize: "2rem",
-                      textAlign: "center",
-                      fontFamily: "josefinSans-Bold",
-                      fontWeight: 1000,
+                      textAlign: "center", 
+                      fontWeight: 600,
                     }}
                   >
                     Reviews
@@ -402,9 +400,8 @@ const ProductPage = ({ data }) => {
                     }}
                     style={{
                       fontSize: "2rem",
-                      textAlign: "center",
-                      fontFamily: "josefinSans-Bold",
-                      fontWeight: 1000,
+                      textAlign: "center", 
+                      fontWeight: 600,
                     }}
                   >
                     Shipping

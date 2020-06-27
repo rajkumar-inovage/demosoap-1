@@ -1,6 +1,6 @@
 body {
 	overflow-x: hidden;
-	font-family: "JosefinSans, sans-serif";
+	font-family: 'josefin-sans', sans-serif;
 	font-size: 1rem;
 	font-weight: 300;
 	font-style: normal;
@@ -45,12 +45,14 @@ a {
 	padding: 100px 0px;
 }
 
+.mt--2 { margin-top: -0.2rem;}
+
 .primary-color {
 	color: rgb(70, 132, 99);
 }
 
 .bg-secondary {
-	background-color: #EFEBDE !important;
+	background-color:rgba(239, 235, 222, 0.95) !important
 }
 
 
@@ -369,7 +371,7 @@ body .news-letter-form input:focus {
 
 .inner-page-content p strong, .inner-page-content strong {
 	font-weight: bold;
-	font-family: "josefinSans-Bold";
+	font-weight: 700;
 	font-size: 1.5rem;
 }
 
@@ -591,11 +593,11 @@ body .select-qnty button {
 
 .contact-data .left-box, .contact-data .right-box {
 	width: 50%;
-	font-family: "josefinSans";
+	font-weight: 400
 }
 
 .contact-data div h3 {
-	font-family: "josefinSans-Bold";
+	font-weight: 700
 }
 
 body .visual_contact_form input {

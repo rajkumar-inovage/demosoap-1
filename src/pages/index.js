@@ -124,8 +124,7 @@ const IndexPage = ({ data }) => {
                       style={{
                         fontSize: "1.7rem",
                         textAlign: "center",
-                        fontFamily: "josefinSans-Bold",
-                        fontWeight: 1000,
+                        fontWeight: 600,
                       }}
                     >
                       Essentials
@@ -140,8 +139,7 @@ const IndexPage = ({ data }) => {
                       style={{
                         fontSize: "1.7rem",
                         textAlign: "center",
-                        fontFamily: "josefinSans-Bold",
-                        fontWeight: 1000,
+                        fontWeight: 600,
                       }}
                     >
                       Donuts
@@ -156,8 +154,7 @@ const IndexPage = ({ data }) => {
                       style={{
                         fontSize: "1.7rem",
                         textAlign: "center",
-                        fontFamily: "josefinSans-Bold",
-                        fontWeight: 1000,
+                        fontWeight: 600,
                       }}
                     >
                       Bath Bombs
@@ -187,7 +184,7 @@ const IndexPage = ({ data }) => {
               <div className="visit-us">
                 <h3
                   className="josefin-sans-b"
-                  style={{ fontSize: "1.8rem", color: "#000" }}
+                  style={{ fontSize: "1.4rem", color: "#000" }}
                 >
                   Visit Us
                 </h3>
