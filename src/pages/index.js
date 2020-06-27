@@ -56,7 +56,7 @@ const IndexPage = ({ data }) => {
                   }}
                 >
                   <h1 className="josefin-sans-b primary-color" style={{ fontSize: "2rem" }}>
-                    100% Handcrafted & locally made!
+                    Handcrafted & locally made!
                   </h1>
                   <div className="slider-inner-content px-4">
                     <p style={{ fontSize: "1.3rem" }}>

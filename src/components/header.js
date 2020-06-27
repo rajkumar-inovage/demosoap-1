@@ -92,7 +92,7 @@ const Header = ({ siteTitle }) => {
     <>
       <header>
         <div
-          className="fixed-header w-100 m-0 position-fixed bg-white"
+          className="top-header w-100 mb-0 bg-white"
           style={{ zIndex: "99" }}
         >
           <p

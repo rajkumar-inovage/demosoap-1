@@ -68,7 +68,7 @@ a {
 	visibility:hidden;
 }
 body .sticky.sticky-show{
-	top:50px !important;
+	top:0px !important;
 	visibility:visible;
 }
 .default-header{
@@ -121,7 +121,7 @@ body .navbar-collapse .navbar-nav .nav-item a {
 }
 
 .banner-section {
-	padding-top: 100px;
+	padding-top: 60px;
 }
 
 .bdr-btn:hover {
@@ -506,6 +506,15 @@ body .news-letter-form input:focus {
 
 .more:hover {
 	margin-left: 20px;
+}
+
+.slider-content-box h1 { 
+    font-size: 2rem;
+    border-bottom: 2px solid #E6B8AF;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .atc a {
