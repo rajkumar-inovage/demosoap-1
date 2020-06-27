@@ -52,10 +52,10 @@ const ProductBox = props => {
           </div>
           <Link
             to={`/product/${product.node.handle}`}
-            className="josefin-sans-sb mt-2 d-block"
+            className="josefin-sans-sb mt--2 d-block"
             style={{ textDecoration: "none" }}
           >
-            <h3 className="" style={{ fontSize: "1.8rem", color: "#000" }}>
+            <h3 className="" style={{ fontSize: "1.6rem", fontWeight: 600, color: "#000" }}>
               {product.node.title}
             </h3>
           </Link>

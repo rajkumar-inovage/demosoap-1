@@ -100,7 +100,7 @@ const Blogs = () => {
                         .split('/')
                         .pop()}/`}
                         style={{ fontSize: '2rem', color: '#000', lineHeight:'2.3rem'}}
-                        className="josefin-sans-b d-block mb-0 text-decoration-none"
+                        className="josefin-sans-sb d-block mb-0 text-decoration-none"
                     >
                         {title}
                     </Link>
