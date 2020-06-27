@@ -96,7 +96,7 @@ const Header = ({ siteTitle }) => {
           style={{ zIndex: "99" }}
         >
           <p
-            className="text-center josefin-sans-sb primary-color p-2"
+            className="text-center josefin-sans primary-color p-2"
             style={{ fontSize: "1rem" }}
           >
             Now offering curbside pick-up | Free next day local shipping within the GTA for orders over $45 | We ship all over Canada
