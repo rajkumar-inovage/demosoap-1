@@ -78,6 +78,11 @@ body .sticky.sticky-show{
 	z-index: 9;
 	width: 100%;
 }
+.dropdown-menu {
+	right: 0;
+	width: 350px;
+	box-shadow: 0px 0px 20px rgba(0,0,0,0.4);  	
+}
 body .select:not(.is-multiple):not(.is-loading)::after {
 	border-color: #000;
 }

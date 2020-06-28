@@ -1,6 +1,6 @@
 @media only screen and (max-width: 500px) {
 	.default-header{
-		top:75px !important;
+		top:0px !important;
 	}
 	body .sticky.sticky-show{
 		top:0px !important;
@@ -9,24 +9,30 @@
 		padding-top: 0px !important
 	}
 }
-@media only screen and (max-width: 600px) {
-
+@media only screen and (max-width: 600px) { 
 	.contact-data .left-box , .contact-data .right-box{
-	width: 100%;
-	margin:15px 0px;
-}
-.navbar-brand.p-0.m-0 img {
-	width: 75px;
-}
-.navbar-collapse{
-	background-color:#fff;
-}
-.logo-box a img {
-	width: 75px;
+		width: 100%;
+		margin:15px 0px;
+	}
+	.navbar-brand.p-0.m-0 img {
+		width: 75px;
+	}
+	.navbar-collapse{
+		background-color:#fff;
+	}
+	.logo-box a img {
+		width: 75px;
+	}
+	.dropdown-menu-right { 
+		left: -195px;
+		width: 350px;
+		box-shadow: 0px 0px 20px rgba(0,0,0,0.4);  	
+	}
+
 }
 
 
-}
+
 @media (min-width: 768px) and (max-width: 1024px) {
 	.navbar-collapse{
 		background-color: #fff;
