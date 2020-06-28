@@ -318,6 +318,7 @@ body .news-letter-form input:focus {
 .tab-outer .tab-menu li .nav-link {
 	border: 2px solid transparent;
 	border-radius: 0px;
+	cursor: pointer;
 }
 
 .tab-outer .tab-menu li .nav-link.active {
