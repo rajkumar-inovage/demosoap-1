@@ -1,6 +1,6 @@
 body {
 	overflow-x: hidden;
-	font-family: "JosefinSans, sans-serif";
+	font-family: 'josefin-sans', sans-serif;
 	font-size: 1rem;
 	font-weight: 300;
 	font-style: normal;
@@ -45,9 +45,16 @@ a {
 	padding: 100px 0px;
 }
 
+.mt--2 { margin-top: -0.2rem;}
+
 .primary-color {
 	color: rgb(70, 132, 99);
 }
+
+.bg-secondary {
+	background-color:rgba(239, 235, 222, 0.95) !important
+}
+
 
 .navbar-brand {
 	width: 110px;
@@ -61,12 +68,12 @@ a {
 	visibility:hidden;
 }
 body .sticky.sticky-show{
-	top:50px !important;
+	top:0px !important;
 	visibility:visible;
 }
 .default-header{
-	position: absolute;
-	top: 50px;
+	position: relative;
+	top: 0px;
 	background-color: transparent;
 	z-index: 9;
 	width: 100%;
@@ -97,7 +104,7 @@ body .navbar-collapse .navbar-nav .nav-item a {
 .home-slider {
 	min-height: 650px;
 	background-size: cover;
-	background-position: center top;
+	background-position: center center;
 	background-repeat: no-repeat;
 	position: relative;
 }
@@ -114,8 +121,12 @@ body .navbar-collapse .navbar-nav .nav-item a {
 }
 
 .banner-section {
-	padding-top: 100px;
+	padding-top: 20px;
 }
+
+.hero {max-width: 1240px; margin: 0 auto;}
+
+.search-icon {cursor: pointer;}
 
 .bdr-btn:hover {
 	border-color: transparent;
@@ -182,7 +193,8 @@ body .navbar-collapse .navbar-nav .nav-item a {
 .add-to-cart {
 	position: absolute;
 	bottom: -70px;
-	left: 50px;
+	margin-left: 50%;
+	left: -25%;
 	transform: translate(0%, -50%);
 	transition: all 0.3s;
 }
@@ -364,7 +376,7 @@ body .news-letter-form input:focus {
 
 .inner-page-content p strong, .inner-page-content strong {
 	font-weight: bold;
-	font-family: "josefinSans-Bold";
+	font-weight: 700;
 	font-size: 1.5rem;
 }
 
@@ -501,6 +513,15 @@ body .news-letter-form input:focus {
 	margin-left: 20px;
 }
 
+.slider-content-box h1 { 
+    font-size: 2rem;
+    border-bottom: 2px solid #E6B8AF;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
 .atc a {
 	color: #000;
 }
@@ -586,11 +607,11 @@ body .select-qnty button {
 
 .contact-data .left-box, .contact-data .right-box {
 	width: 50%;
-	font-family: "josefinSans";
+	font-weight: 400
 }
 
 .contact-data div h3 {
-	font-family: "josefinSans-Bold";
+	font-weight: 700
 }
 
 body .visual_contact_form input {

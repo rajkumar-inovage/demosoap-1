@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import SEO from "../components/seo";
 import { Link, graphql } from "gatsby";
 import ProductList from "../components/recentProduct";
-import banner from "../assets/img/soap.jpg";
+import banner from "../assets/img/first_slide.webp";
 import shop from "../assets/img/shop.jpg";
 import RecentBlogs from "../components/RecentBlogs";
 import Essentials from "../components/CollectionFilter/Essentials";
@@ -40,15 +40,7 @@ const IndexPage = ({ data }) => {
       <SEO title="Home" />
       <section className="banner-section">
         <div className="home-banner">
-          <Container>
-            <Row className="mx-0 text-center pt-3 pt-lg-4">
-              <h3
-                className="josefin-sans-b primary-color w-100"
-                style={{ fontSize: "1.6rem" }}
-              >
-                Now offering curbside pick-up & next day GTA deliveries
-              </h3>
-            </Row>
+          <Container> 
             <div
               className="home-slider row mx-0"
               style={{ backgroundImage: `url(${banner})` }}
@@ -56,19 +48,19 @@ const IndexPage = ({ data }) => {
               <div className="slider-content">
                 <div className="button-box"></div>
                 <div
-                  className="bg-white slider-content-box josefin-sans text-center p-3 rounded p-lg-5 col-11 col-md-10 col-lg-5 mx-auto position-absolute"
+                  className="bg-secondary slider-content-box josefin-sans text-center p-3 rounded p-lg-4 col-11 col-md-10 col-lg-8 mx-auto position-absolute"
                   style={{
                     top: "50%",
                     left: "50%",
                     transform: "translate(-50%,-50%)",
                   }}
                 >
-                  <h1 className="josefin-sans-b" style={{ fontSize: "1.8rem" }}>
+                  <h1 className="josefin-sans-b primary-color" style={{ fontSize: "2rem" }}>
                     Handcrafted & locally made!
                   </h1>
                   <div className="slider-inner-content px-4">
                     <p style={{ fontSize: "1.3rem" }}>
-                      We create uniquely designed soaps with minimal and ethical
+                      We create uniquely designed soaps with organic natural and ethical
                       ingredients
                     </p>
                     <div className="btn-box mt-4">
@@ -90,17 +82,17 @@ const IndexPage = ({ data }) => {
       <section className="py-3 py-lg-5">
         <ProductList data={data} />
       </section>
-      <section className="mt-3 mt-lg-5">
+      <section className="mt-3 mt-lg-2">
         <Container>
           <div className="jumbotron text-center py-3 py-lg-5 bg-light">
             <h2
-              className="josefin-sans-b mb-3"
-              style={{ fontSize: "2.5rem", color: "#000" }}
+              className="josefin-sans-sb mb-3"
+              style={{ fontSize: "2rem", color: "#000" }}
             >
               All products are:
             </h2>
             <p
-              className="text-uppercase josefin-sans-b"
+              className="text-uppercase josefin-sans"
               style={{ fontSize: "1.2rem", color: "#000" }}
             >
               VEGAN - GLUTEN FREE - KOSHER - HYPOALLERGENIC - BIODEGRADABLE
@@ -114,7 +106,7 @@ const IndexPage = ({ data }) => {
             <div className="w-100">
               <div className="tab-outer d-block d-md-inline-flex w-100">
                 <h2
-                  className="josefin-sans-b mb-3 col-12 col-md-5 col-lg-6"
+                  className="josefin-sans-sb mb-3 col-12 col-md-5 col-lg-6"
                   style={{ fontSize: "2.5rem", color: "#000" }}
                 >
                   Our Collections
@@ -132,8 +124,7 @@ const IndexPage = ({ data }) => {
                       style={{
                         fontSize: "1.7rem",
                         textAlign: "center",
-                        fontFamily: "josefinSans-Bold",
-                        fontWeight: 1000,
+                        fontWeight: 600,
                       }}
                     >
                       Essentials
@@ -148,8 +139,7 @@ const IndexPage = ({ data }) => {
                       style={{
                         fontSize: "1.7rem",
                         textAlign: "center",
-                        fontFamily: "josefinSans-Bold",
-                        fontWeight: 1000,
+                        fontWeight: 600,
                       }}
                     >
                       Donuts
@@ -164,8 +154,7 @@ const IndexPage = ({ data }) => {
                       style={{
                         fontSize: "1.7rem",
                         textAlign: "center",
-                        fontFamily: "josefinSans-Bold",
-                        fontWeight: 1000,
+                        fontWeight: 600,
                       }}
                     >
                       Bath Bombs
@@ -191,11 +180,11 @@ const IndexPage = ({ data }) => {
       <section className="py-3 py-lg-5">
         <Container>
           <Row className="mx-0">
-            <Col className="col-12 col-lg-4">
+            <Col className="col-12 col-lg-4 d-flex align-self-center">
               <div className="visit-us">
                 <h3
                   className="josefin-sans-b"
-                  style={{ fontSize: "1.8rem", color: "#000" }}
+                  style={{ fontSize: "1.4rem", color: "#000" }}
                 >
                   Visit Us
                 </h3>
@@ -207,7 +196,7 @@ const IndexPage = ({ data }) => {
                   ON M6K 3P6
                 </div>
                 <div
-                  className="schedule josefin-sans mt-3 mt-lg-5"
+                  className="schedule josefin-sans mt-3 mt-lg-5 d-none"
                   style={{ fontSize: "1.3rem" }}
                 >
                   Mon - Fri : 12–7p.m. <br />
@@ -230,7 +219,7 @@ const IndexPage = ({ data }) => {
                   className="col-7 follow"
                   style={{ backgroundImage: `url(${shop})` }}
                 ></Col>
-                <Col className="col-5 pl-3 pl-lg-5">
+                <Col className="col-5 pl-3 pl-lg-5 d-flex align-self-center">
                   <div className="follow-us">
                     <h3
                       className="josefin-sans-b p-0"

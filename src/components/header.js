@@ -92,20 +92,20 @@ const Header = ({ siteTitle }) => {
     <>
       <header>
         <div
-          className="fixed-header w-100 m-0 position-fixed bg-white"
+          className="top-header w-100 mb-0 bg-white"
           style={{ zIndex: "99" }}
         >
           <p
-            className="text-center josefin-sans-sb primary-color p-2"
-            style={{ fontSize: "1.4rem" }}
+            className="text-center josefin-sans primary-color p-2"
+            style={{ fontSize: "1rem" }}
           >
-            Free local shipping within the GTA for orders over $45
+            Now offering curbside pick-up | Free next day local shipping within the GTA for orders over $45 | We ship all over Canada
           </p>
         </div>
         <Navbar
           light={true}
           expand="lg"
-          className="bg-transparent px-3 py-sm-0 py-md-3 default-header"
+          className="bg-transparent px-3 py-sm-0 default-header pt-0"
         >
           <Container>
             <div className="navbar-start m-0 logo-box mt-3">
@@ -142,7 +142,7 @@ const Header = ({ siteTitle }) => {
                     <Link
                       to="/collections/essentials/"
                       onClick={closeNav}
-                      className="space-1 p-sm-0 p-lg-0 p-xl-0 nav-link font-weight-bold"
+                      className="space-1 p-sm-0 p-lg-0 p-xl-0 nav-link "
                     >
                       Essential
                     </Link>
@@ -151,7 +151,7 @@ const Header = ({ siteTitle }) => {
                     <Link
                       to="/collections/fragrant/"
                       onClick={closeNav}
-                      className="space-1 p-sm-0 p-lg-0 p-xl-0 nav-link font-weight-bold"
+                      className="space-1 p-sm-0 p-lg-0 p-xl-0 nav-link "
                     >
                       Fragrant
                     </Link>
@@ -160,7 +160,7 @@ const Header = ({ siteTitle }) => {
                     <Link
                       to="/collections/figure/"
                       onClick={closeNav}
-                      className="space-1 p-sm-0 p-lg-0 p-xl-0 nav-link font-weight-bold"
+                      className="space-1 p-sm-0 p-lg-0 p-xl-0 nav-link "
                     >
                       Figure
                     </Link>
@@ -169,7 +169,7 @@ const Header = ({ siteTitle }) => {
                     <Link
                       to="/collections/donut/"
                       onClick={closeNav}
-                      className="space-1 p-sm-0 p-lg-0 p-xl-0 nav-link font-weight-bold"
+                      className="space-1 p-sm-0 p-lg-0 p-xl-0 nav-link "
                     >
                       Donut
                     </Link>
@@ -177,7 +177,7 @@ const Header = ({ siteTitle }) => {
                   <NavItem className="mx-3 my-0 d-inline-block py-md-3 py-lg-0">
                     <Link
                       to="/collections/bath-bath-bomb/"
-                      className="space-1 p-sm-0 p-lg-0 p-xl-0 nav-link font-weight-bold"
+                      className="space-1 p-sm-0 p-lg-0 p-xl-0 nav-link "
                     >
                       Bath bombs
                     </Link>
@@ -186,7 +186,7 @@ const Header = ({ siteTitle }) => {
                     <Link
                       to="/collections/treat/"
                       onClick={closeNav}
-                      className="space-1 p-sm-0 p-lg-0 p-xl-0 nav-link font-weight-bold"
+                      className="space-1 p-sm-0 p-lg-0 p-xl-0 nav-link "
                     >
                       Treat
                     </Link>
@@ -195,14 +195,14 @@ const Header = ({ siteTitle }) => {
                     <Link
                       to="/collections/gift/"
                       onClick={closeNav}
-                      className="space-1 p-sm-0 p-lg-0 p-xl-0 nav-link font-weight-bold"
+                      className="space-1 p-sm-0 p-lg-0 p-xl-0 nav-link "
                     >
                       Gift
                     </Link>
                   </NavItem>
                 </Nav>
                 <div className="navbar-end d-block d-lg-flex text-center pb-3 pb-lg-0">
-                  <div className="navbar-item d-inline-block">
+                  <div className="navbar-item search-icon d-inline-block">
                     <span
                       className="has-text-dark is-size-5"
                       onClick={openSearchBar}
@@ -296,9 +296,9 @@ const Header = ({ siteTitle }) => {
                               <strong className="josefin-sans-b">
                                 Subtotal:{" "}
                               </strong>
-                              <span className="text-dark josefin-sans-b fs-2 font-weight-bold amount">
+                              <span className="text-dark josefin-sans-b fs-2  amount">
                                 CAD&nbsp;
-                                <span className="text-dark josefin-sans fs-2 font-weight-bold currencySymbol">
+                                <span className="text-dark josefin-sans fs-2  currencySymbol">
                                   $
                                 </span>
                                 {subtotalPrice}
@@ -308,14 +308,14 @@ const Header = ({ siteTitle }) => {
                           <li className="list-group-item p-2 text-center border-0 rounded-0">
                             <Link
                               to="/cart/"
-                              className="btn btn-custom-secondary josefin-sans-b font-weight-bold btn-sm  mx-1"
+                              className="btn btn-custom-secondary josefin-sans-b  btn-sm  mx-1"
                               style={{ color: "#000" }}
                             >
                               View Cart
                             </Link>
                             <button
                               onClick={handleCheckout}
-                              className="btn btn-checkout josefin-sans-b btn-sm font-weight-bold space-1 text-dark mx-1"
+                              className="btn btn-checkout josefin-sans-b btn-sm  space-1 text-dark mx-1"
                               style={{ color: "#000" }}
                             >
                               Checkout
@@ -375,7 +375,7 @@ const Header = ({ siteTitle }) => {
                     <Link
                       to="/collections/essentials/"
                       onClick={closeNav}
-                      className="space-1 p-sm-0 p-lg-0 p-xl-0 nav-link font-weight-bold"
+                      className="space-1 p-sm-0 p-lg-0 p-xl-0 nav-link "
                     >
                       Essential
                     </Link>
@@ -384,7 +384,7 @@ const Header = ({ siteTitle }) => {
                     <Link
                       to="/collections/fragrant/"
                       onClick={closeNav}
-                      className="space-1 p-sm-0 p-lg-0 p-xl-0 nav-link font-weight-bold"
+                      className="space-1 p-sm-0 p-lg-0 p-xl-0 nav-link "
                     >
                       Fragrant
                     </Link>
@@ -393,7 +393,7 @@ const Header = ({ siteTitle }) => {
                     <Link
                       to="/collections/figure/"
                       onClick={closeNav}
-                      className="space-1 p-sm-0 p-lg-0 p-xl-0 nav-link font-weight-bold"
+                      className="space-1 p-sm-0 p-lg-0 p-xl-0 nav-link "
                     >
                       Figure
                     </Link>
@@ -402,7 +402,7 @@ const Header = ({ siteTitle }) => {
                     <Link
                       to="/collections/donut/"
                       onClick={closeNav}
-                      className="space-1 p-sm-0 p-lg-0 p-xl-0 nav-link font-weight-bold"
+                      className="space-1 p-sm-0 p-lg-0 p-xl-0 nav-link "
                     >
                       Donut
                     </Link>
@@ -410,7 +410,7 @@ const Header = ({ siteTitle }) => {
                   <NavItem className="mx-3 my-0 d-inline-block py-md-3 py-lg-0">
                     <Link
                       to="/collections/bath-bath-bomb/"
-                      className="space-1 p-sm-0 p-lg-0 p-xl-0 nav-link font-weight-bold"
+                      className="space-1 p-sm-0 p-lg-0 p-xl-0 nav-link "
                     >
                       Bath bombs
                     </Link>
@@ -419,7 +419,7 @@ const Header = ({ siteTitle }) => {
                     <Link
                       to="/collections/treat/"
                       onClick={closeNav}
-                      className="space-1 p-sm-0 p-lg-0 p-xl-0 nav-link font-weight-bold"
+                      className="space-1 p-sm-0 p-lg-0 p-xl-0 nav-link "
                     >
                       Treat
                     </Link>
@@ -428,7 +428,7 @@ const Header = ({ siteTitle }) => {
                     <Link
                       to="/collections/gift/"
                       onClick={closeNav}
-                      className="space-1 p-sm-0 p-lg-0 p-xl-0 nav-link font-weight-bold"
+                      className="space-1 p-sm-0 p-lg-0 p-xl-0 nav-link "
                     >
                       Gift
                     </Link>
@@ -529,9 +529,9 @@ const Header = ({ siteTitle }) => {
                               <strong className="josefin-sans-b">
                                 Subtotal:{" "}
                               </strong>
-                              <span className="text-dark josefin-sans-b fs-2 font-weight-bold amount">
+                              <span className="text-dark josefin-sans-b fs-2  amount">
                                 CAD&nbsp;
-                                <span className="text-dark josefin-sans fs-2 font-weight-bold currencySymbol">
+                                <span className="text-dark josefin-sans fs-2  currencySymbol">
                                   $
                                 </span>
                                 {subtotalPrice}
@@ -541,14 +541,14 @@ const Header = ({ siteTitle }) => {
                           <li className="list-group-item p-2 text-center border-0 rounded-0">
                             <Link
                               to="/cart/"
-                              className="btn btn-custom-secondary josefin-sans-b font-weight-bold btn-sm  mx-1"
+                              className="btn btn-custom-secondary josefin-sans-b  btn-sm  mx-1"
                               style={{ color: "#000" }}
                             >
                               View Cart
                             </Link>
                             <button
                               onClick={handleCheckout}
-                              className="btn btn-checkout josefin-sans-b btn-sm font-weight-bold space-1 text-dark mx-1"
+                              className="btn btn-checkout josefin-sans-b btn-sm  space-1 text-dark mx-1"
                               style={{ color: "#000" }}
                             >
                               Checkout
@@ -586,7 +586,7 @@ const Header = ({ siteTitle }) => {
                     placeholder="Search"
                     aria-label="Search"
                   />
-                  <span className="icon is-right">
+                  <span className="icon is-right pr-4">
                     <i className="fa fa-search" aria-hidden="true"></i>
                   </span>
                   <label className="has-text-white w-100 text-center mt-3 josefin-sans-sb">
