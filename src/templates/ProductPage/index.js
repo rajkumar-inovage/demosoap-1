@@ -249,7 +249,7 @@ const ProductPage = ({ data }) => {
   return (
     <>
       <SEO title={product.title} description={product.description} />
-      <section className="inner-pages-banner py-100">
+      <section className="inner-pages-banner ">
         <Container>
           <Row className="mx-0 pt-3 pt-lg-5">
             <Col className="col-12 col-md-6 pdt-image">
