@@ -34,13 +34,6 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-tidio-chat",
-      options: {
-        tidioKey: process.env.TIDIOKEY,
-        enableDuringDevelop: false,
-      },
-    },
-    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,

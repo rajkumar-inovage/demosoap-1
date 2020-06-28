@@ -24,7 +24,6 @@
     "gatsby-plugin-sass": "^2.3.2",
     "gatsby-plugin-sharp": "^2.6.9",
     "gatsby-plugin-shopify-buy": "0.0.2",
-    "gatsby-plugin-tidio-chat": "^1.0.0",
     "gatsby-query-params": "^1.2.1",
     "gatsby-remark-images-zoom": "^1.1.0",
     "gatsby-source-filesystem": "^2.3.8",

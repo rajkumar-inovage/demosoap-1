@@ -261,7 +261,7 @@ const ProductPage = ({ data }) => {
                   fluid={currentImage.localFile.childImageSharp.fluid}
                   key={currentImage.localFile.id}
                   alt={product.title}
-                  className="imgProduct"
+                  className=""
                 />
               </Box>
               {product.images.map((image) => (

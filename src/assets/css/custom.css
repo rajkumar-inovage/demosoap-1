@@ -589,7 +589,7 @@ body .select-qnty button {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	transform: translate(-50%, -70%);
 }
 
 .select-qnty .ri-plus:before {
@@ -598,7 +598,7 @@ body .select-qnty button {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	transform: translate(-50%, -70%);
 }
 
 .buy-it-now button:hover {
@@ -692,4 +692,8 @@ body .visual_contact_form input {
 	outline: none;
 	width: 30px;
 	height: 30px;
+    font-size: 35px;
+    line-height: 0;
+    padding-bottom: 20px;
+    font-weight: 300;
 }
