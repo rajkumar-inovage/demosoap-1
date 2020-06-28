@@ -9,7 +9,7 @@ const ProductList = ({ data }) => {
     <Container>
       <Row className="m-0 text-center">
         <h2
-          className="josefin-sans-b w-100 mb-2"
+          className="josefin-sans-sb w-100 mb-2"
           style={{ fontSize: "2.5rem", color: "#000" }}
         >
           Trending Products
