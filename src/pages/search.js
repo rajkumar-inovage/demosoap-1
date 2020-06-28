@@ -41,7 +41,7 @@ export class SearchPage extends Component {
                     style={{fontSize:'1.3rem'}}
                   />
                   <span className="icon is-right" style={{top:'8px', right:'15px'}}>
-                    <i className="fas fa-search"></i>
+                    <i className="fa fa-search"></i>
                   </span>
                 </p>
               </div>

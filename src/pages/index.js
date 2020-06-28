@@ -42,7 +42,7 @@ const IndexPage = ({ data }) => {
         <div className="home-banner">
           <Container> 
             <div
-              className="home-slider row mx-0 mt-5"
+              className="home-slider row mx-0"
               style={{ backgroundImage: `url(${banner})` }}
             >
               <div className="slider-content">
@@ -82,17 +82,17 @@ const IndexPage = ({ data }) => {
       <section className="py-3 py-lg-5">
         <ProductList data={data} />
       </section>
-      <section className="mt-3 mt-lg-5">
+      <section className="mt-3 mt-lg-2">
         <Container>
           <div className="jumbotron text-center py-3 py-lg-5 bg-light">
             <h2
-              className="josefin-sans-b mb-3"
-              style={{ fontSize: "2.5rem", color: "#000" }}
+              className="josefin-sans-sb mb-3"
+              style={{ fontSize: "2rem", color: "#000" }}
             >
               All products are:
             </h2>
             <p
-              className="text-uppercase josefin-sans-b"
+              className="text-uppercase josefin-sans"
               style={{ fontSize: "1.2rem", color: "#000" }}
             >
               VEGAN - GLUTEN FREE - KOSHER - HYPOALLERGENIC - BIODEGRADABLE
@@ -106,7 +106,7 @@ const IndexPage = ({ data }) => {
             <div className="w-100">
               <div className="tab-outer d-block d-md-inline-flex w-100">
                 <h2
-                  className="josefin-sans-b mb-3 col-12 col-md-5 col-lg-6"
+                  className="josefin-sans-sb mb-3 col-12 col-md-5 col-lg-6"
                   style={{ fontSize: "2.5rem", color: "#000" }}
                 >
                   Our Collections
@@ -180,7 +180,7 @@ const IndexPage = ({ data }) => {
       <section className="py-3 py-lg-5">
         <Container>
           <Row className="mx-0">
-            <Col className="col-12 col-lg-4">
+            <Col className="col-12 col-lg-4 d-flex align-self-center">
               <div className="visit-us">
                 <h3
                   className="josefin-sans-b"
@@ -196,7 +196,7 @@ const IndexPage = ({ data }) => {
                   ON M6K 3P6
                 </div>
                 <div
-                  className="schedule josefin-sans mt-3 mt-lg-5"
+                  className="schedule josefin-sans mt-3 mt-lg-5 d-none"
                   style={{ fontSize: "1.3rem" }}
                 >
                   Mon - Fri : 12–7p.m. <br />
@@ -219,7 +219,7 @@ const IndexPage = ({ data }) => {
                   className="col-7 follow"
                   style={{ backgroundImage: `url(${shop})` }}
                 ></Col>
-                <Col className="col-5 pl-3 pl-lg-5">
+                <Col className="col-5 pl-3 pl-lg-5 d-flex align-self-center">
                   <div className="follow-us">
                     <h3
                       className="josefin-sans-b p-0"

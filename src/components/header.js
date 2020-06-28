@@ -202,7 +202,7 @@ const Header = ({ siteTitle }) => {
                   </NavItem>
                 </Nav>
                 <div className="navbar-end d-block d-lg-flex text-center pb-3 pb-lg-0">
-                  <div className="navbar-item d-inline-block">
+                  <div className="navbar-item search-icon d-inline-block">
                     <span
                       className="has-text-dark is-size-5"
                       onClick={openSearchBar}
@@ -586,7 +586,7 @@ const Header = ({ siteTitle }) => {
                     placeholder="Search"
                     aria-label="Search"
                   />
-                  <span className="icon is-right">
+                  <span className="icon is-right pr-4">
                     <i className="fa fa-search" aria-hidden="true"></i>
                   </span>
                   <label className="has-text-white w-100 text-center mt-3 josefin-sans-sb">

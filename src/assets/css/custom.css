@@ -72,8 +72,8 @@ body .sticky.sticky-show{
 	visibility:visible;
 }
 .default-header{
-	position: absolute;
-	top: 50px;
+	position: relative;
+	top: 0px;
 	background-color: transparent;
 	z-index: 9;
 	width: 100%;
@@ -121,8 +121,12 @@ body .navbar-collapse .navbar-nav .nav-item a {
 }
 
 .banner-section {
-	padding-top: 60px;
+	padding-top: 20px;
 }
+
+.hero {max-width: 1240px; margin: 0 auto;}
+
+.search-icon {cursor: pointer;}
 
 .bdr-btn:hover {
 	border-color: transparent;
@@ -189,7 +193,8 @@ body .navbar-collapse .navbar-nav .nav-item a {
 .add-to-cart {
 	position: absolute;
 	bottom: -70px;
-	left: 50px;
+	margin-left: 50%;
+	left: -25%;
 	transform: translate(0%, -50%);
 	transition: all 0.3s;
 }

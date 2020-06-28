@@ -196,7 +196,7 @@ class Layout extends Component {
           render={data => (
             <>
               <Header siteTitle={data.site.siteMetadata.title} />
-              <div className="child pt-5">
+              <div className="child pt-0">
 
               {children}
               </div>
