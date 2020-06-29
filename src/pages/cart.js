@@ -77,7 +77,7 @@ const Cart = () => {
               <div className="column mt-5 pt-5">
                 <div className="box productBox pb-3 pb-lg-5">
                   <h2 className="title has-text-weight-semibold josefin-sans-b">
-                    CarT
+                    Your Cart:
                   </h2>
                   <div className="Line_item josefin-sans">{Line_item}</div>
                   <div className="Line_itemMobile josefin-sans">
