@@ -21,6 +21,16 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-performance-metrics`,
+      options: {
+        firstPaint: false,
+        firstContentfulPaint: true,
+        firstInputDelay: true,
+        //useLogging: true,
+        //useGoogleAnalytics: false
+      }
+    },
+    {
       resolve: `gatsby-plugin-apollo-shopify`,
       options: {
         shopName: process.env.SHOP_NAME,
@@ -34,11 +44,13 @@ module.exports = {
       },
     },
     {
-      resolve: "gatsby-plugin-tidio-chat",
+      resolve: 'gatsby-plugin-web-font-loader',
       options: {
-        tidioKey: process.env.TIDIOKEY,
-        enableDuringDevelop: false,
-      },
+        typekit: {
+          id: 'nyn5hna',
+          families: 'josefin-sans'
+        }
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,
