@@ -5,6 +5,7 @@ import ProductList from "../components/recentProduct";
 import banner from "../assets/img/first_slide.webp";
 import shop from "../assets/img/shop.jpg";
 import RecentBlogs from "../components/RecentBlogs";
+import { useHasBeenVisible } from '../hooks/useVisibility';
 
 // import Essentials from "../components/CollectionFilter/Essentials";
 // import BathBomb from "../components/CollectionFilter/BathBombs";
@@ -89,7 +90,7 @@ const IndexPage = ({ data }) => {
       {hasScrolled || isScrolling ? (
         <ProductList data={data} />
       ) : (
-         <span>..Loading</span>
+         <span></span>
       )}
 
       <section className="py-3 py-lg-5">
