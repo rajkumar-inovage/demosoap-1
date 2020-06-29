@@ -5,26 +5,8 @@ import ProductList from "../components/recentProduct";
 import banner from "../assets/img/first_slide.webp";
 import shop from "../assets/img/shop.jpg";
 import RecentBlogs from "../components/RecentBlogs";
-import { useHasBeenVisible } from '../hooks/useVisibility';
-
-// import Essentials from "../components/CollectionFilter/Essentials";
-// import BathBomb from "../components/CollectionFilter/BathBombs";
-// import Donut from "../components/CollectionFilter/Donut";
-// import s1 from "../assets/img/s1.jpg"
-// import s2 from "../assets/img/s2.jpg"
-// import s3 from "../assets/img/s3.jpg"
-// import s4 from "../assets/img/s4.jpg"
-// import s1thumb from "../assets/img/s1-thumb.jpg";
-// import s3thumb from "../assets/img/s3-thumb.jpg";
-// import s2thumb from "../assets/img/s2-thumb.jpg";
-// import s4thumb from "../assets/img/s4-thumb.jpg";
-// import classnames from 'classnames'
-import {
-  TabContent,
-  TabPane,
-  Nav,
-  NavItem,
-  NavLink,
+import { useHasBeenVisible } from '../hooks/useVisibility'; 
+import { 
   Container,
   Row,
   Col,
