@@ -21,6 +21,16 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-performance-metrics`,
+      options: {
+        firstPaint: false,
+        firstContentfulPaint: true,
+        firstInputDelay: true,
+        //useLogging: true,
+        //useGoogleAnalytics: false
+      }
+    },
+    {
       resolve: `gatsby-plugin-apollo-shopify`,
       options: {
         shopName: process.env.SHOP_NAME,
@@ -31,6 +41,13 @@ module.exports = {
       resolve: "gatsby-plugin-root-import",
       options: {
         "~": path.join(__dirname, "src/"),
+      },
+    },
+    {
+      resolve: "gatsby-plugin-tidio-chat",
+      options: {
+        tidioKey: process.env.TIDIOKEY,
+        enableDuringDevelop: false,
       },
     },
     {
