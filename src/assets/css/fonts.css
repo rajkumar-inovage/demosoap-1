@@ -2,22 +2,26 @@
   font-family: 'josefin-sans', sans-serif;
   font-weight: 300;
   font-style: normal;
+  font-display: swap
 }
 
 .josefin-sans {
   font-family: 'josefin-sans', sans-serif;
   font-weight: 400;
   font-style: normal;
+  font-display: swap
 }
 
 .josefin-sans-sb {
   font-family: 'josefin-sans', sans-serif;
   font-weight: 600;
   font-style: normal;
+  font-display: swap
 }
 
 .josefin-sans-b {
   font-family: 'josefin-sans', sans-serif;
   font-weight: 700;
   font-style: normal;
+  font-display: swap
 }
