@@ -30,35 +30,23 @@ const Header = ({ siteTitle }) => {
   const isBrowser = typeof window !== "undefined";
   const context = useContext(StoreContext);
   const { removeLineItem, client, checkout } = context;
-  const [cartCount, setCartCount] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
   const getLineItemTotal = (quantity, variantPrice) => {
     const lineItemTotal = quantity * variantPrice;
     return lineItemTotal.toFixed(2);
   };
-  const getCartCount = () => {
-    if (cartCount !== 0) {
-      return cartCount;
-    } else {
-      return "";
-    }
-  };
     const handleRemove = (event, lineItemId) => {
       event.preventDefault();
       removeLineItem(client, checkout.id, lineItemId).then(() => {
-        setCartCount(cartCount - 1);
-      });
-    };
+    });
+  }; 
   const handleCheckout = () => {
     window.open(checkout.webUrl);
   };
   const lineItems = checkout.lineItems;
   const subtotalPrice = checkout.subtotalPrice;
-  useEffect(() => {
-    if (checkout.lineItems.length > 0) {
-      setCartCount(checkout.lineItems.length);
-    }
+  useEffect(() => { 
     if (isBrowser) {
       $(window).scroll(function() {
         var sticky = $(".sticky"),
@@ -232,7 +220,9 @@ const Header = ({ siteTitle }) => {
                         className="position-absolute cart-counter text-dark josefin-sans pl-2"
                         style={{ top: "-3px" }}
                       >
-                        {getCartCount()}
+                        {checkout.lineItems.length
+                          ? checkout.lineItems.length
+                          : ""}
                       </span>
                     </DropdownToggle>
                     <DropdownMenu className="dropdown-menu-right rounded-0">
@@ -465,7 +455,9 @@ const Header = ({ siteTitle }) => {
                         className="position-absolute cart-counter text-dark josefin-sans pl-2"
                         style={{ top: "-3px" }}
                       >
-                        {getCartCount()}
+                        {checkout.lineItems.length
+                          ? checkout.lineItems.length
+                          : ""}
                       </span>
                     </DropdownToggle>
                     <DropdownMenu className="dropdown-menu-right rounded-0">

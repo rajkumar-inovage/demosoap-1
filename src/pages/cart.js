@@ -1,4 +1,5 @@
 import React, { useContext } from "react"; /* eslint-disable */
+import { Link } from "gatsby";
 import Seo from "../components/seo";
 import StoreContext from "../context/store";
 import LineItem from "../components/line_item";
@@ -21,7 +22,7 @@ const Cart = () => {
             </tr>
           </thead>
           <tbody>
-            {checkout.lineItems.map(line_item => {
+            {checkout.lineItems.map((line_item) => {
               return (
                 <LineItem key={line_item.id.toString()} line_item={line_item} />
               );
@@ -32,19 +33,19 @@ const Cart = () => {
     ) : (
       <div className="has-text-centered">
         <p className="is-size-3">Your cart is currently empty.</p>
-        <a
+        <Link
           className="button is-medium is-dark josefin-sans-b text-decoration-none"
           style={{ marginTop: "50px" }}
-          href="/"
+          to="/"
         >
           Continue shopping →{" "}
-        </a>
+        </Link>
       </div>
     );
 
   const Line_item_Mobile =
     checkout.lineItems.length !== 0 ? (
-      checkout.lineItems.map(line_item_mobile => {
+      checkout.lineItems.map((line_item_mobile) => {
         return (
           <LineItem_Mobile
             key={line_item_mobile.id.toString()}
@@ -57,13 +58,13 @@ const Cart = () => {
         <p className="is-size-3 josefin-sans-sb">
           Your cart is currently empty.
         </p>
-        <a
+        <Link
           className="button is-medium is-dark josefin-sans-b text-decoration-none"
           style={{ marginTop: "50px" }}
-          href="/"
+          to="/"
         >
           Continue shopping →{" "}
-        </a>
+        </Link>
       </div>
     );
 
@@ -77,7 +78,7 @@ const Cart = () => {
               <div className="column mt-5 pt-5">
                 <div className="box productBox pb-3 pb-lg-5">
                   <h2 className="title has-text-weight-semibold josefin-sans-b">
-                    Your Cart:
+                    Cart
                   </h2>
                   <div className="Line_item josefin-sans">{Line_item}</div>
                   <div className="Line_itemMobile josefin-sans">
