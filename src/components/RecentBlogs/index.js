@@ -63,7 +63,7 @@ const RecentBlogs = () => {
                       fontSize: "12px",
                       top: "25px",
                       left: "-10px",
-                      zIndex: "9",
+                      zIndex: "8",
                     }}
                   >
                     {publishedAt}

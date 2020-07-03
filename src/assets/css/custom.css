@@ -496,7 +496,7 @@ body .news-letter-form input:focus {
 }
 
 .product-layout.row a img {
-	width: 70%;
+	width: 100%;
 	height: auto;
 	margin: 0px auto;
 }
@@ -701,4 +701,18 @@ body .visual_contact_form input {
     line-height: 0;
     padding-bottom: 20px;
     font-weight: 300;
+}
+
+.collection-banner {
+	background-position: right;
+	background-repeat: no-repeat;
+}
+
+.trending-products {height: 100%;}
+
+.productImage {
+	height: 79%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
