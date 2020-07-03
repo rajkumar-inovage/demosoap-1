@@ -87,7 +87,7 @@ const Header = ({ siteTitle }) => {
             className="text-center josefin-sans primary-color p-2"
             style={{ fontSize: "1rem" }}
           >
-            Now offering curbside pick-up | Free next day local shipping within the GTA for orders over $45 | We ship all over Canada
+            We offer curbside pick-up | Free GTA delivery for orders over $45 | We ship all over Canada
           </p>
         </div>
         <Navbar

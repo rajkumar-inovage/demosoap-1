@@ -145,6 +145,7 @@ const CollectionsPage = ({ data }) => {
         className="collection-banner py-100"
         style={{ backgroundColor: bgColor, backgroundImage: `url(${categoryBg})` }}
       >
+        <div className="mobile-bg"></div>
         <Container className="py-0 ">
           <Row className="mx-0">
             <Col className="banner-data text-center col-12">
@@ -332,7 +333,7 @@ const CollectionsPage = ({ data }) => {
 
                             <Link
                               to={`/product/${handle}/`}
-                              className="josefin-sans-b mt-2 d-block"
+                              className="josefin-sans-b d-block"
                               style={{ textDecoration: "none" }}
                             >
                               <h3
