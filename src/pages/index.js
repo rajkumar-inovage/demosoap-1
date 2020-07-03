@@ -61,11 +61,11 @@ const IndexPage = ({ data }) => {
       </section> 
 
       <section class="grid-wrapper container my-5">
-        <div class="box a">A</div>
-        <div class="box b">B</div>
-        <div class="box c">C</div>
-        <div class="box d">D</div>
-        <div class="box e">E</div>
+        <div class="grid-boxes a">A</div>
+        <div class="grid-boxes b">B</div>
+        <div class="grid-boxes c">C</div>
+        <div class="grid-boxes d">D</div>
+        <div class="grid-boxes e">E</div>
       </section>
 
 
