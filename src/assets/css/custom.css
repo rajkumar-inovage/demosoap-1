@@ -707,3 +707,15 @@ body .visual_contact_form input {
 	background-position: right;
 	background-repeat: no-repeat;
 }
+
+.trending-products {height: 100%;}
+
+.productImage {
+	height: 79%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gridProduct { 
+}

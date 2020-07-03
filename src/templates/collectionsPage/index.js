@@ -269,9 +269,9 @@ const CollectionsPage = ({ data }) => {
                 )
                 .map(
                   ({ title, handle, description, images, variants }, index) => (
-                    <div key={index} className={gridClass + " mb-3 mb-lg-5"}>
+                    <div key={index} className={gridClass + " mb-3 mb-lg-5 gridProduct"}>
                       <div className={displayClass + " trending-products"}>
-                        <div className={imgClass}>
+                        <div className={imgClass + ' productImage'}>
                           <Link to={`/product/${handle}/`} className="">
                             <div className="tp-image">
                               {images.length &&
@@ -337,7 +337,7 @@ const CollectionsPage = ({ data }) => {
                             >
                               <h3
                                 className=""
-                                style={{ fontSize: "1.4rem", color: "#000" }}
+                                style={{ color: "#000" }}
                               >
                                 {title}
                               </h3>
