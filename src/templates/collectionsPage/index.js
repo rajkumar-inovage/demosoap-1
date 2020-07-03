@@ -3,10 +3,19 @@ import { Container, Row, Col } from "reactstrap";
 import React, { useContext, useState, useEffect } from "react";
 import { graphql, Link } from "gatsby";
 import StoreContext from "~/context/store";
-// import $ from 'jquery'
 
 import GridIcon from "~/components/grid-icon";
 import ListIcon from "~/components/list-icon";
+
+import fragrantBg from '../../assets/img/fragrance.jpg';
+import essentialsBg from '../../assets/img/essentials.jpg';
+import figuresBg from '../../assets/img/figures.jpg';
+import donutsBg from '../../assets/img/donuts.jpg';
+import bathBg from '../../assets/img/bathbomb.jpg';
+import treatsBg from '../../assets/img/treats.jpg';
+import giftBg from '../../assets/img/gifts.jpg';
+
+
 const CollectionsPage = ({ data }) => {
   const context = useContext(StoreContext);
   const { checkout } = context;
@@ -22,6 +31,34 @@ const CollectionsPage = ({ data }) => {
   const products = data.shopifyCollection.products;
   const buttonClasses =
     "btn-link bg-transparent border-0 text-decoration-none text-body p-0";
+
+  let categoryBg;
+  let bgColor;
+
+  const title = data.shopifyCollection.title;
+  if (title == "Fragrant") { 
+    categoryBg = fragrantBg;
+    bgColor = "#eeeff3";
+  } else if (title == "Essentials") {
+    categoryBg = essentialsBg;
+    bgColor = "#f3f3f3";
+  } else if (title == "Figures") {
+    categoryBg = figuresBg;
+    bgColor = "#f3f3f3";
+  } else if (title == "Donuts") {
+    categoryBg = donutsBg;
+    bgColor = "#eeeeee";
+  } else if (title == "Bath Bombs") {
+    categoryBg = bathBg;
+    bgColor = "#f7f6f4";
+  } else if (title == "Treat") {
+    categoryBg = treatsBg;
+    bgColor = "#f3f3f3";
+  } else if (title == "Gift") {
+    categoryBg = giftBg;
+    bgColor = "#dcc3d6";
+  }
+  
   const getPrice = (price) =>
     Intl.NumberFormat(undefined, {
       currency: checkout.currencyCode ? checkout.currencyCode : "CAD",
@@ -99,16 +136,18 @@ const CollectionsPage = ({ data }) => {
     e.preventDefault();
     setSort(e.target.value);
   };
+   
+
   return (
     <>
       <SEO title={data.shopifyCollection.title} />
       <section
         className="collection-banner py-100"
-        style={{ backgroundColor: "#e7e7e7" }}
+        style={{ backgroundColor: bgColor, backgroundImage: `url(${categoryBg})` }}
       >
-        <Container className="py-0 py-lg-5">
+        <Container className="py-0 ">
           <Row className="mx-0">
-            <Col className="banner-data text-center col-12 mt-5">
+            <Col className="banner-data text-center col-12">
               <div
                 className="breadcrump josefin-sans"
                 style={{ fontSize: "1.3rem" }}

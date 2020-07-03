@@ -57,7 +57,7 @@ const IndexPage = ({ data }) => {
                       <Link
                         className="btn bdr-btn text-uppercase josefin-sans-sb"
                         style={{ fontSize: "1rem", color: "#000" }}
-                        to=""
+                        to="/collections/essentials/"
                       >
                         SHOP NOW
                       </Link>
