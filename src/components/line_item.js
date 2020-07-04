@@ -32,10 +32,7 @@ const Line_item = props => {
             >
               <p className="has-text-weight-semibold is-size-5 has-text-black">
                 {line_item.title}
-              </p>
-              <p className="has-text-weight-normal has-text-black">
-                {line_item.variant.title}
-              </p>
+              </p> 
             </a>
           </div>
         </div>
