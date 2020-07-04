@@ -61,11 +61,26 @@ const IndexPage = ({ data }) => {
       </section> 
 
       <section class="grid-wrapper container my-5">
-        <div class="grid-boxes a">A</div>
-        <div class="grid-boxes b">B</div>
-        <div class="grid-boxes c">C</div>
-        <div class="grid-boxes d">D</div>
-        <div class="grid-boxes e">E</div>
+        <div class="grid-boxes a">
+          <h2>Essentials</h2>
+          <p>Our collection of daily use soaps that will help rejuvinate your skin</p>
+        </div>
+        <div class="grid-boxes b">
+          <p>We are 100% Handmade in Toronto! We are proud to be doing what we love since '04. We have a small team that creates everything in house and in small batches to ensure quality & freshness in our Liberty Village studio.</p>
+          <br/>
+          <p>We source and create our recipies with high quality natural organic & cruelty free. We strive to keep our ingredients simple and transparent.</p>
+        </div>
+        <div class="grid-boxes c">
+          <h2>Donut Soaps</h2>
+          <p>Donut shaped soaps that smell amazing and look delicious!</p>
+        </div>
+        <div class="grid-boxes d">
+          <h2>Bath Bomb</h2>
+          <p>Indulge and moisturize your skin with our handcrafted bath bomb</p></div>
+        <div class="grid-boxes e">
+          <h2>Treats</h2>
+          <p>Inspired by desserts each piece is absolutely fun and one of a kind.</p>
+        </div>
       </section>
 
 
