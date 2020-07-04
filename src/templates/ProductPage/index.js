@@ -356,7 +356,7 @@ const ProductPage = ({ data }) => {
       </section>
       <section>
         <Container>
-          <Row className="mx-0">
+          <Row className="mt-5">
             <div className="w-100">
               <Nav
                 tabs
@@ -390,21 +390,6 @@ const ProductPage = ({ data }) => {
                     }}
                   >
                     Reviews
-                  </NavLink>
-                </NavItem>
-                <NavItem className="d-inline-block">
-                  <NavLink
-                    className={classnames({ active: activeTab === "3" })}
-                    onClick={() => {
-                      toggle("3");
-                    }}
-                    style={{
-                      fontSize: "2rem",
-                      textAlign: "center", 
-                      fontWeight: 600,
-                    }}
-                  >
-                    Shipping
                   </NavLink>
                 </NavItem>
               </Nav>
@@ -671,22 +656,6 @@ const ProductPage = ({ data }) => {
                           </div>
                         </div>
                       </form>
-                    </Col>
-                  </Row>
-                </TabPane>
-                <TabPane tabId="3">
-                  <Row>
-                    <Col sm="12">
-                      <div
-                        className="josefin-sans"
-                        style={{ fontSize: "1.3rem" }}
-                      >
-                        <p>Free Shipping over $45.</p>
-                        <p className="pt-3 pt-lg-5">
-                          Express Delivery areas include Including Richmond
-                          hill, York, Scarborough, Mississauga.{" "}
-                        </p>
-                      </div>
                     </Col>
                   </Row>
                 </TabPane>

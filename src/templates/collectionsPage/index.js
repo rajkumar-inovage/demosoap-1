@@ -56,7 +56,7 @@ const CollectionsPage = ({ data }) => {
     bgColor = "#eae6e6";
   } else if (title == "Gift") {
     categoryBg = giftBg;
-    bgColor = "#dcc3d6";
+    bgColor = "#f1f1ef";
   }
   
   const getPrice = (price) =>

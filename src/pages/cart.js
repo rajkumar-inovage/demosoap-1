@@ -71,7 +71,7 @@ const Cart = () => {
   return (
     <>
       <Seo />
-      <section className="hero is-fullheight is-light is-bold">
+      <section className="hero is-light is-bold">
         <div className="hero-body">
           <div className="container">
             <div className="columns is-vcentered">
