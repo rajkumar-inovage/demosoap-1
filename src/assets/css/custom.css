@@ -727,10 +727,10 @@ body .visual_contact_form input {
 	background-color: #fff;
 	color: #444;
 }
-
+ 
 .grid-boxes {
 	background-color: #444;
-	border-radius: 5px;
+	border-radius: 10px;
 	padding: 20px;
 	font-size: 100%;
 	display: flex;
@@ -739,6 +739,8 @@ body .visual_contact_form input {
 	color: #000;
 	flex-direction: column;
 	padding-top: 63%;
+	transition: 0.4s all ease-in-out;
+	cursor: pointer !important
 }
 
 .grid-boxes h2{
@@ -749,6 +751,12 @@ body .visual_contact_form input {
 .grid-boxes p{
 	font-size: 1.2em;
 	font-weight: 400;
+}
+
+.grid-boxes:hover {
+	transition: 0.4s all ease-in-out;
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+	cursor: pointer !important;
 }
 
 .a {
@@ -777,4 +785,18 @@ body .visual_contact_form input {
 	grid-column: col2-start ;
 	grid-row: row2-start ;
 	background: url("../../assets/img/treats_category.jpg") no-repeat center center;
+}
+
+.badges {
+	background: url("../../assets/img/badges.jpg") center center no-repeat #fff;
+	width: 341px;
+	height: 70px;
+	display: inline-block;
+	position: relative;
+}
+
+.badges span {
+	position: absolute;
+	bottom: -30px;
+	font-size: 0.8em;
 }
