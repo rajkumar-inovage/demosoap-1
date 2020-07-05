@@ -786,3 +786,17 @@ body .visual_contact_form input {
 	grid-row: row2-start ;
 	background: url("../../assets/img/treats_category.jpg") no-repeat center center;
 }
+
+.badges {
+	background: url("../../assets/img/badges.jpg") center center no-repeat #fff;
+	width: 341px;
+	height: 70px;
+	display: inline-block;
+	position: relative;
+}
+
+.badges span {
+	position: absolute;
+	bottom: -30px;
+	font-size: 0.8em;
+}

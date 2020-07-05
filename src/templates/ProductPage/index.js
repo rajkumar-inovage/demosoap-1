@@ -342,6 +342,7 @@ const ProductPage = ({ data }) => {
                   </span>
                 </div>
                 <ProductForm product={product} />
+                <div className={'badges my-3'}><span>Vegan, Natural, Organic & Not tested on animals</span></div>
                 <AddToCompare
                   className="row align-items-center"
                   product={product}
