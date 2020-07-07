@@ -594,7 +594,7 @@ body .select-qnty button {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -70%);
+	transform: translate(-50%, -50%);
 }
 
 .select-qnty .ri-plus:before {
@@ -603,7 +603,7 @@ body .select-qnty button {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -70%);
+	transform: translate(-50%, -50%);
 }
 
 .buy-it-now button:hover {
@@ -799,4 +799,30 @@ body .visual_contact_form input {
 	position: absolute;
 	bottom: -30px;
 	font-size: 0.8em;
+}
+.single-pdt-img .carousel-control-next-icon {
+	background-image: unset;
+	position: relative;
+	z-index: 999;
+}
+.single-pdt-img .carousel-control-next-icon::after{
+	content:"\f054";
+	position:absolute;
+	z-index:999;
+	color:rgba(0,0,0,0.8);
+	font-family:"FontAwesome";
+	font-size:25px;
+}
+.single-pdt-img .carousel-control-prev-icon{
+	background-image: unset;
+	position: relative;
+	z-index: 999;
+}
+.single-pdt-img .carousel-control-prev-icon::after{
+	content:"\f053";
+	position:absolute;
+	z-index:999;
+	color:rgba(0,0,0,0.8);
+	font-family:"FontAwesome";
+	font-size:25px;
 }
