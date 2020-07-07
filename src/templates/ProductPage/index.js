@@ -15,6 +15,11 @@ import {
   Alert,
   UncontrolledPopover,
   PopoverBody,
+  Media,
+  Carousel,
+  CarouselItem,
+  CarouselControl,
+  Modal,
 } from "reactstrap";
 import {
   FacebookShareButton,
@@ -245,6 +250,80 @@ const ProductPage = ({ data }) => {
     };
     sendReview(`//reviews.hulkapps.com/api/shop/${shopID}/reviews`);
   };
+  const [activeIndex, setActiveIndex] = useState(0)
+  const [animating, setAnimating] = useState(false)
+  const [modal, setModal] = useState(false)
+  const [modalImage, setModalImage] = useState('')
+
+  const next = () => {
+    if (animating) return
+    const nextIndex =
+      activeIndex === product.images.length - 1 ? 0 : activeIndex + 1
+    setActiveIndex(nextIndex)
+  }
+
+  const previous = () => {
+    if (animating) return
+    const nextIndex =
+      activeIndex === 0 ? product.images.length - 1 : activeIndex - 1
+    setActiveIndex(nextIndex)
+  }
+
+  const goToIndex = (event, newIndex) => {
+    if (animating) return
+    setActiveIndex(newIndex)
+  }
+  const closeModal = () => setModal(false)
+
+  const toggleModal = (event, imgSrc) => {
+    setModalImage(imgSrc)
+    setModal(true)
+  }
+
+  const externalCloseBtn = (
+    <button
+      className="close"
+      style={{
+        position: 'absolute',
+        top: '0',
+        right: '15px',
+        fontSize: '3em',
+        color: '#fff',
+      }}
+      onClick={closeModal}
+    >
+      &times;
+    </button>
+  )
+
+  const slides = product.images.map(image => {
+    return (
+      <CarouselItem
+        onExiting={() => setAnimating(true)}
+        onExited={() => setAnimating(false)}
+        key={image.id}
+      >
+        <div
+          className="parent h-100 d-flex justify-content-center"
+          key={image.id}
+        >
+          <button
+            className="p-0 bg-transparent border-0"
+            onClick={e =>
+              toggleModal(e, image.localFile.childImageSharp.fluid.src)
+            }
+            style={{ outline: 'none', cursor: 'zoom-in' }}
+          >
+            <img
+              className="img-fluid my-auto"
+              src={image.localFile.childImageSharp.fluid.src}
+              alt={product.title}
+            />
+          </button>
+        </div>
+      </CarouselItem>
+    )
+  })
   
   return (
     <>
@@ -253,25 +332,43 @@ const ProductPage = ({ data }) => {
         <Container>
           <Row className="mx-0 pt-3 pt-lg-5">
             <Col className="col-12 col-md-6 pdt-image">
-              <Box
-                style={{ margin: "auto", marginTop: "0", boxShadow: "none" }}
-                className="img-hover-zoom--zoom-n-rotate img-hover-zoom"
+              <Carousel
+                activeIndex={activeIndex}
+                next={next}
+                previous={previous}
+                interval={false}
+                enableTouch={true}
+                className="single-pdt-img"
               >
-                <Img
-                  fluid={currentImage.localFile.childImageSharp.fluid}
-                  key={currentImage.localFile.id}
-                  alt={product.title}
-                  className=""
+                {slides}
+                <CarouselControl
+                  direction="prev"
+                  directionText="Previous"
+                  onClickHandler={previous}
                 />
-              </Box>
-              {product.images.map((image) => (
-                <Img
-                  className="d-none"
-                  fluid={image.localFile.childImageSharp.fluid}
-                  key={image.id}
-                  alt={product.title}
+                <CarouselControl
+                  direction="next"
+                  directionText="Next"
+                  onClickHandler={next}
                 />
-              ))}
+              </Carousel>
+              <div className="row mx-n2">
+                {product.images.map((image, index) => (
+                  <div className="col-3 px-2" key={image.id}>
+                    <button
+                      className="p-0 bg-transparent border-0 mb-2"
+                      onClick={e => goToIndex(e, index)}
+                      style={{ outline: 'none' }}
+                    >
+                      <img
+                        className="img-fluid"
+                        src={image.localFile.childImageSharp.fluid.src}
+                        alt=""
+                      />
+                    </button>
+                  </div>
+                ))}
+              </div>
             </Col>
             <Col className="col-12 col-md-6 pl-3 pl-lg-5">
               <div className="single-product-details pl-lg-5">
