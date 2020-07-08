@@ -352,7 +352,7 @@ const ProductPage = ({ data }) => {
                   onClickHandler={next}
                 />
               </Carousel>
-              <div className="row mx-n2">
+              <div className="row mt-3">
                 {product.images.map((image, index) => (
                   <div className="col-3 px-2" key={image.id}>
                     <button
