@@ -565,7 +565,7 @@ const Header = ({ siteTitle }) => {
             <div className="field">
               <div className="control has-icons-right">
                 <form
-                  action="../search"
+                  action="/search"
                   method="GET"
                   className="col-10 col-lg-6 mx-auto"
                 >

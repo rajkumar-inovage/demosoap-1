@@ -13,7 +13,7 @@ export class SearchPage extends Component {
   }
   componentDidMount() {
     this.setState({
-      document: document.location.search.substring(7).split("=")[0]
+      document: document.location.search.substring(7).replace(/\+/g, ' ').split("=")[0]
     });
   }
 
