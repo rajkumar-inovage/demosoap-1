@@ -428,6 +428,7 @@ const ProductPage = ({ data }) => {
                               ? "fa fa-star"
                               : "fa fa-star-o"
                           }
+                          style={{color:'#ffcc33'}}
                         />
                       </li>
                     ))}
@@ -525,7 +526,7 @@ const ProductPage = ({ data }) => {
                           loadMore={loadMoreReviews}
                           hasMore={ratingData.length >= showReviews}
                           loader={
-                            <li className="border mb-4" key={ratingData.length}>
+                            <li className="mb-4" key={ratingData.length}>
                               <div
                                 className="spinner-grow text-primary"
                                 role="status"
@@ -538,9 +539,9 @@ const ProductPage = ({ data }) => {
                           {ratingData
                             .slice(0, showReviews)
                             .map((review, index) => (
-                              <li className="border mb-4" key={index}>
+                              <li className="border mb-4 p-3" key={index}>
                                 <h4
-                                  className="color-primary erbaum-bold text-uppercase"
+                                  className="color-primary erbaum-bold text-uppercase d-none"
                                   style={{
                                     fontSize: "16px",
                                   }}
@@ -562,7 +563,7 @@ const ProductPage = ({ data }) => {
                                       }
                                       key={i}
                                     >
-                                      <span className="color-primary fa fa-star"></span>
+                                      <span className="fa fa-star" style={{color:'#ffcc33'}}></span>
                                     </button>
                                   ))}
                                   <div className="br-current-rating d-none">
@@ -575,7 +576,7 @@ const ProductPage = ({ data }) => {
                                     fontSize: "14px",
                                   }}
                                 >
-                                  <b className="color-primary">
+                                  <b className="color-primary" style={{fontSize:'1.2rem'}}>
                                     {review.author}–
                                   </b>
                                   {getDate(review.created_at)}
