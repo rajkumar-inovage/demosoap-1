@@ -280,7 +280,7 @@ const CollectionsPage = ({ data }) => {
                 loader={
                   <div className="col-12 text-center" key={products.length}>
                     <div
-                      className="spinner-grow text-primary"
+                      className="spinner-grow"
                       role="status"
                       style={{
                         width: "3rem",
