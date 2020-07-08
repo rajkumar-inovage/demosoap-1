@@ -1,8 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { graphql, Link } from "gatsby";
 import PropTypes from "prop-types";
-import Img from "gatsby-image";
-import { Box } from "rebass";
+import InfiniteScroll from "react-infinite-scroller";
 import {
   TabContent,
   TabPane,
@@ -50,16 +49,21 @@ const ProductPage = ({ data }) => {
   const productTitle = product.title;
   const productImg = product.images.length ? product.images[0].originalSrc : "";
   const currentImage = product.images[0];
+  const reviewsPerPage = 5;
   const [activeTab, setActiveTab] = useState("1");
   const [responseColor, setResponseColor] = useState("");
   const [responseContent, setResponseContent] = useState(false);
   const [responseVisible, setResponseVisible] = useState(false);
   const [responseErrorVisible, setResponseErrorVisible] = useState(false);
-  const showReviews = 5;
+  const [showReviews, setShowReviews] = useState(reviewsPerPage);
   const [avgRating, setAvgRating] = useState(0);
   const [ratingData, setRatingData] = useState([]);
   const [productRating, setProductRating] = useState(0);
   const [totalRating, setTotalRating] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [animating, setAnimating] = useState(false);
+  const [modal, setModal] = useState(false);
+  const [modalImage, setModalImage] = useState("");
   const dismissResponse = () => {
     setResponseVisible(false);
     setResponseContent(false);
@@ -250,11 +254,7 @@ const ProductPage = ({ data }) => {
     };
     sendReview(`//reviews.hulkapps.com/api/shop/${shopID}/reviews`);
   };
-  const [activeIndex, setActiveIndex] = useState(0)
-  const [animating, setAnimating] = useState(false)
-  const [modal, setModal] = useState(false)
-  const [modalImage, setModalImage] = useState('')
-
+  
   const next = () => {
     if (animating) return
     const nextIndex =
@@ -279,7 +279,11 @@ const ProductPage = ({ data }) => {
     setModalImage(imgSrc)
     setModal(true)
   }
-
+  const loadMoreReviews = () => {
+    setTimeout(() => {
+      setShowReviews(showReviews + reviewsPerPage);
+    }, 1500);
+  };
   const externalCloseBtn = (
     <button
       className="close"
@@ -357,8 +361,8 @@ const ProductPage = ({ data }) => {
                   <div className="col-3 px-2" key={image.id}>
                     <button
                       className="p-0 bg-transparent border-0 mb-2"
-                      onClick={e => goToIndex(e, index)}
-                      style={{ outline: 'none' }}
+                      onClick={(e) => goToIndex(e, index)}
+                      style={{ outline: "none" }}
                     >
                       <img
                         className="img-fluid"
@@ -411,24 +415,22 @@ const ProductPage = ({ data }) => {
                   <ul
                     className="list-unstyled p-0 m-0 d-block"
                     title={
-                      avgRating > 0 ? `${avgRating} out of 5` : `No Reviews`
+                      avgRating > 0
+                        ? `${avgRating} out of 5 Stars`
+                        : `No Reviews`
                     }
                   >
-                    <li className="d-inline-block">
-                      <i className="fa fa-star-o"></i>
-                    </li>
-                    <li className="d-inline-block">
-                      <i className="fa fa-star-o"></i>
-                    </li>
-                    <li className="d-inline-block">
-                      <i className="fa fa-star-o"></i>
-                    </li>
-                    <li className="d-inline-block">
-                      <i className="fa fa-star-o"></i>
-                    </li>
-                    <li className="d-inline-block">
-                      <i className="fa fa-star-o"></i>
-                    </li>
+                    {[...Array(5)].map((elem, i) => (
+                      <li className="d-inline-block" key={i}>
+                        <i
+                          className={
+                            i + 1 <= Math.round(avgRating)
+                              ? "fa fa-star"
+                              : "fa fa-star-o"
+                          }
+                        />
+                      </li>
+                    ))}
                   </ul>
                   <span className="josefin-sans pl-3">
                     {avgRating > 0
@@ -439,7 +441,9 @@ const ProductPage = ({ data }) => {
                   </span>
                 </div>
                 <ProductForm product={product} />
-                <div className={'badges my-3'}><span>Vegan, Natural, Organic & Not tested on animals</span></div>
+                <div className={"badges my-3"}>
+                  <span>Vegan, Natural, Organic & Not tested on animals</span>
+                </div>
                 <AddToCompare
                   className="row align-items-center"
                   product={product}
@@ -468,7 +472,7 @@ const ProductPage = ({ data }) => {
                     }}
                     style={{
                       fontSize: "2rem",
-                      textAlign: "center", 
+                      textAlign: "center",
                       fontWeight: 600,
                     }}
                   >
@@ -483,7 +487,7 @@ const ProductPage = ({ data }) => {
                     }}
                     style={{
                       fontSize: "2rem",
-                      textAlign: "center", 
+                      textAlign: "center",
                       fontWeight: 600,
                     }}
                   >
@@ -514,7 +518,23 @@ const ProductPage = ({ data }) => {
                         Customer Reviews
                       </h2>
                       {ratingData.length ? (
-                        <ul className="list-unstyled d-inline-block p-0 mb-0 ratings">
+                        <InfiniteScroll
+                          element="ul"
+                          className="list-unstyled d-inline-block p-0 mb-0 ratings"
+                          pageStart={0}
+                          loadMore={loadMoreReviews}
+                          hasMore={ratingData.length >= showReviews}
+                          loader={
+                            <li className="border mb-4" key={ratingData.length}>
+                              <div
+                                className="spinner-grow text-primary"
+                                role="status"
+                              >
+                                <span className="sr-only">Loading...</span>
+                              </div>
+                            </li>
+                          }
+                        >
                           {ratingData
                             .slice(0, showReviews)
                             .map((review, index) => (
@@ -565,7 +585,7 @@ const ProductPage = ({ data }) => {
                                 </p>
                               </li>
                             ))}
-                        </ul>
+                        </InfiniteScroll>
                       ) : (
                         <div className="spr-summary">
                           <span className="spr-summary-caption josefin-sans-sb">

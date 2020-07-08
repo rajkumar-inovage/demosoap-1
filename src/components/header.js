@@ -1,6 +1,7 @@
-import { Link } from "gatsby"; /* eslint-disable */
-import PropTypes from "prop-types";
+/* eslint-disable */
 import React, { useContext, useState, useEffect } from "react";
+import { Link } from "gatsby";
+import PropTypes from "prop-types";
 import $ from "jquery";
 import StoreContext from "~/context/store";
 import logo from "../assets/img/demosoap-logo_x100.png";
@@ -36,10 +37,9 @@ const Header = ({ siteTitle }) => {
     const lineItemTotal = quantity * variantPrice;
     return lineItemTotal.toFixed(2);
   };
-    const handleRemove = (event, lineItemId) => {
-      event.preventDefault();
-      removeLineItem(client, checkout.id, lineItemId).then(() => {
-    });
+  const handleRemove = (event, lineItemId) => {
+    event.preventDefault();
+    removeLineItem(client, checkout.id, lineItemId);
   }; 
   const handleCheckout = () => {
     window.open(checkout.webUrl);
