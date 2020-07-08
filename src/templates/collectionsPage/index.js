@@ -160,8 +160,8 @@ const CollectionsPage = ({ data }) => {
           <Row className="mx-0">
             <Col className="banner-data text-center col-12">
               <div
-                className="breadcrump josefin-sans"
-                style={{ fontSize: "1.3rem" }}
+                className="breadcrump clickclack-light"
+                style={{ fontSize: "1em" }}
               >
                 <Link
                   to="/"
@@ -184,7 +184,7 @@ const CollectionsPage = ({ data }) => {
               <div className="collection-title mt-4 d-inline-flex">
                 <Link
                   to="/collections"
-                  className="text-decoration-none d-none d-lg-block"
+                  className="text-decoration-none d-none d-lg-block mt-n1"
                   style={{ color: "#000" }}
                 >
                   <i
@@ -193,7 +193,7 @@ const CollectionsPage = ({ data }) => {
                   ></i>
                 </Link>
                 <h1
-                  className="m-0 josefin-sans-b"
+                  className="m-0 clickclack"
                   style={{
                     fontSize: "2.5rem",
                     color: "#000",
@@ -353,7 +353,7 @@ const CollectionsPage = ({ data }) => {
                           </div>
                           <div className={cntClass}>
                             <div className="tp-details">
-                              <div className="review-and-price d-block mt-3">
+                              <div className="review-and-price d-block mt-3 clickclack">
                                 <span className="star-value d-none w-50 pl-2 pl-lg-3">
                                   <i className="fa fa-star"></i>
                                   <i className="fa fa-star"></i>
@@ -364,9 +364,9 @@ const CollectionsPage = ({ data }) => {
                                 <span
                                   className={
                                     rowpriceClass +
-                                    " price josefin-sans-sb text-right w-100 pr-2 pr-lg-3"
+                                    " price  text-right clickclack w-100 pr-2 pr-lg-3"
                                   }
-                                  style={{ fontSize: "1.2rem", color: "#000" }}
+                                  style={{ fontSize: "1.2rem", color: "#4e4e4e" }}
                                 >
                                   {getPrice(variants[0].price)}
                                 </span>
@@ -374,17 +374,17 @@ const CollectionsPage = ({ data }) => {
 
                               <Link
                                 to={`/product/${handle}/`}
-                                className="josefin-sans-b d-block"
+                                className="clickclack d-block product-name"
                                 style={{ textDecoration: "none" }}
                               >
-                                <h3 className="" style={{ color: "#000" }}>
+                                <h3 className="" style={{ color: "#4e4e4e" }}>
                                   {title}
                                 </h3>
                               </Link>
                               <div className={descClass}>
                                 <span
                                   className="price josefin-sans-b d-inline-block text-left w-50 pr-2 pr-lg-3"
-                                  style={{ fontSize: "1.2rem", color: "#000" }}
+                                  style={{ fontSize: "1.2rem", color: "#4e4e4e" }}
                                 >
                                   {getPrice(variants[0].price)}
                                 </span>
@@ -402,7 +402,7 @@ const CollectionsPage = ({ data }) => {
                                     className="more josefin-sans-sb text-decoration-none position-relative"
                                     style={{
                                       fontSize: "1.3rem",
-                                      color: "#000",
+                                      color: "#4e4e4e",
                                     }}
                                   >
                                     More

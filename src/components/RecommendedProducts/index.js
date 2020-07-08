@@ -116,15 +116,15 @@ const RecommendedProducts = (prop) => {
                               <i className="fa fa-star"></i>
                             </span>
                             <span
-                              className="price josefin-sans-sb d-inline-block text-right w-100 pr-2 pr-lg-3"
-                              style={{ fontSize: "1.2rem" }}
+                              className="price clickclack d-inline-block text-right w-100 pr-2 pr-lg-3"
+                              style={{ fontSize: "1.0rem" }}
                             >
                               {getPrice(priceRange.maxVariantPrice.amount)}
                             </span>
                           </div>
                           <Link
                             to={`/product/${handle}/`}
-                            className="josefin-sans-sb mt-2 d-block"
+                            className="clickclack product-name mt-2 d-block"
                             style={{ textDecoration: "none" }}
                           >
                             <h3

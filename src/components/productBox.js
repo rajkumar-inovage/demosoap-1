@@ -35,7 +35,7 @@ const ProductBox = props => {
           </div>
         </Link>
         <div className="tp-details">
-          <div className="review-and-price d-block mt-3">
+          <div className="review-and-price d-block mt-3 clickclack">
             <span className="star-value d-none w-50 pl-2 pl-lg-3">
               <i className="fa fa-star"></i>
               <i className="fa fa-star"></i>
@@ -44,7 +44,7 @@ const ProductBox = props => {
               <i className="fa fa-star"></i>
             </span>
             <span
-              className="price josefin-sans-sb d-inline-block text-right w-100 pr-2 pr-lg-3"
+              className="price clickclack d-inline-block text-right w-100 pr-2 pr-lg-3"
               style={{ fontSize: "1.2rem" }}
             >
               {getPrice(product.node.variants[0].price)}
@@ -52,10 +52,10 @@ const ProductBox = props => {
           </div>
           <Link
             to={`/product/${product.node.handle}`}
-            className="josefin-sans-sb mt--2 d-block"
+            className="clickclack mt--2 d-block"
             style={{ textDecoration: "none" }}
           >
-            <h3 className="" style={{ fontSize: "1.6rem", fontWeight: 600, color: "#000" }}>
+            <h3 className="" style={{ fontSize: "1.6rem", fontWeight: 400, color: "#000" }}>
               {product.node.title}
             </h3>
           </Link>

@@ -48,7 +48,7 @@ module.exports = {
       options: {
         typekit: {
           id: 'nyn5hna',
-          families: 'josefin-sans'
+          families: ['josefin-sans', 'click-clack']
         }
       }
     },

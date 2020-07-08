@@ -65,7 +65,7 @@ const ProductForm = ({ product }) => {
   };
   return (
     <>
-      <h3 className="josefin-sans-b product-price">{price}</h3>
+      <h3 className="clickclack product-price">{price}</h3>
       <p className="josefin-sans mt-3 mb-5">
         {product.description.substring(0, MAX_LENGTH)}&hellip;
       </p>

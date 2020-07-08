@@ -826,3 +826,11 @@ body .visual_contact_form input {
 	font-family:"FontAwesome";
 	font-size:25px;
 }
+
+.product-name {
+	width: 70% !important;
+	max-width: 100% !important;
+	float: left;
+	position: relative;
+	top: -15px;
+}

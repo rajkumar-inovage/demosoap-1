@@ -377,7 +377,7 @@ const ProductPage = ({ data }) => {
             <Col className="col-12 col-md-6 pl-3 pl-lg-5">
               <div className="single-product-details pl-lg-5">
                 <div className="title-and-share d-flex">
-                  <h1 className="josefin-sans-b p-0 m-0 flex-grow-1">
+                  <h1 className="clickclack p-0 m-0 flex-grow-1">
                     {product.title}
                   </h1>
                   <div className="text-right p-0 m-0">
@@ -603,7 +603,7 @@ const ProductPage = ({ data }) => {
                       >
                         <h3
                           className="josefin-sans-b"
-                          style={{ color: "#000" }}
+                          style={{ color: "#4e4e4e" }}
                         >
                           Write a Review
                         </h3>
@@ -617,7 +617,7 @@ const ProductPage = ({ data }) => {
                           <div className="col-12 form-group">
                             <label
                               className="josefin-sans-b"
-                              style={{ color: "#000", fontSize: "1.1rem" }}
+                              style={{ color: "#4e4e4e", fontSize: "1.1rem" }}
                               htmlFor="author"
                             >
                               Name
@@ -637,7 +637,7 @@ const ProductPage = ({ data }) => {
                           <div className="col-12 form-group">
                             <label
                               className="josefin-sans-b"
-                              style={{ color: "#000", fontSize: "1.1rem" }}
+                              style={{ color: "#333", fontSize: "1.1rem" }}
                               htmlFor="email"
                             >
                               Email
@@ -819,7 +819,7 @@ const ProductPage = ({ data }) => {
         <Container>
           <Row className="mx-0">
             <h2
-              className="josefin-sans-b w-100 text-center"
+              className=" w-100 text-center"
               style={{ color: "#000", fontSize: "2.8rem" }}
             >
               We also recommend
