@@ -5,6 +5,3 @@ public
 .idea
 
 package-lock.json
-
-.env.development
-.env.production
