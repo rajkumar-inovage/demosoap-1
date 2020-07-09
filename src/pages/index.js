@@ -78,7 +78,7 @@ const IndexPage = ({ data }) => {
         </div> 
  
         <div class="grid-boxes d" onClick={(e) => { e.preventDefault(); window.location.href='/collections/bath-bath-bomb/'; }}>
-          <h2>Bath Bomb</h2>
+          <h2>Bath Bombs</h2>
           <p>Indulge and moisturize your skin with our handcrafted bath bomb</p>
         </div> 
  
