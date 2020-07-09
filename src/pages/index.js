@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import SEO from "../components/seo";
 import { Link, graphql } from "gatsby";
 import ProductList from "../components/recentProduct";
-import banner from "../assets/img/demosoap_store.jpg";
+import banner from "../assets/img/image0-min.jpeg";
 import shop from "../assets/img/shop.jpg";
 import RecentBlogs from "../components/RecentBlogs";
 import { 
@@ -28,17 +28,17 @@ const IndexPage = ({ data }) => {
               <div className="slider-content">
                 <div className="button-box"></div>
                 <div
-                  className="bg-secondary slider-content-box josefin-sans text-center p-3 rounded p-lg-4 col-11 col-md-10 col-lg-8 mx-auto position-absolute"
+                  className="bg-secondary slider-content-box josefin-sans text-center rounded position-absolute"
                   style={{
-                    top: "50%",
+                    top: "65%",
                     left: "50%",
                     transform: "translate(-50%,-50%)",
                   }}
                 >
-                  <h1 className="josefin-sans-b primary-color" style={{ fontSize: "2rem" }}>
+                  <h1 className="clickclack primary-color" style={{ fontSize: "2rem" }}>
                     Handcrafted & locally made!
                   </h1>
-                  <div className="slider-inner-content px-4">
+                  <div className="slider-inner-content ">
                     <p style={{ fontSize: "1.3rem" }}>
                       We create uniquely designed soaps with organic natural and ethical
                       ingredients
