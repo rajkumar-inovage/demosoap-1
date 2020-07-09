@@ -282,6 +282,7 @@ const CollectionsPage = ({ data }) => {
                     <div
                       className="spinner-grow"
                       role="status"
+                      threshold="450"
                       style={{
                         width: "3rem",
                         height: "3rem",
@@ -294,15 +295,6 @@ const CollectionsPage = ({ data }) => {
               >
                 {products
                   .slice(0, showProducts)
-                  .sort(
-                    sort === "low"
-                      ? (a, b) => a.variants[0].price - b.variants[0].price
-                      : sort === "high"
-                      ? (a, b) => b.variants[0].price - a.variants[0].price
-                      : sort === "Z-A"
-                      ? (a, b) => b.title.localeCompare(a.title)
-                      : (a, b) => a.title.localeCompare(b.title)
-                  )
                   .map(
                     (
                       { title, handle, description, images, variants },
