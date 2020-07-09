@@ -2,21 +2,8 @@
 <h1 align="center">
 <img alt="Gatsby" src="src/assets/img/demosoap-logo.png" height="60px" />
 <br/>
-Demosoap WP/Shopify Beta
+Demosoap Shopify Beta
 </h1>
 
-## 💎 Features
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f4434381-4653-45ea-b6c7-c30a80e06854/deploy-status)](https://app.netlify.com/sites/demosoap-beta/deploys)
 
-- Cart
-- Product grid
-- Product page
-- Chat Feature
-- Bottom to Top Button
-- Newsletter
-- Dynamic Inventory Checking
-- Image optimization with Gatsby Image
-- Styled Components with Emotion
-- Google Analytics
-- SEO
-
-<!-- AUTO-GENERATED-CONTENT:END -->
