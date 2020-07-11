@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import SEO from "../components/seo";
 import { Link, graphql } from "gatsby";
 import ProductList from "../components/recentProduct";
-import banner from "../assets/img/image0-min.jpeg";
+import banner from "../assets/img/image0-min.jpg";
 import shop from "../assets/img/shop.jpg";
 import RecentBlogs from "../components/RecentBlogs";
 import { 
@@ -40,8 +40,8 @@ const IndexPage = ({ data }) => {
                   </h1>
                   <div className="slider-inner-content ">
                     <p style={{ fontSize: "1.3rem" }}>
-                      We create uniquely designed soaps with organic natural and ethical
-                      ingredients
+                      We create unique soaps with organic natural and ethical
+                      ingredients made in Toronto est.2004
                     </p>
                     <div className="btn-box mt-4">
                       <Link

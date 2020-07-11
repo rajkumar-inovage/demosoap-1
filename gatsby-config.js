@@ -6,9 +6,9 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     author: `Inovexia`,
-    title: `Demosoap`,
-    description: `A Gatsby Shoplift theme package built by Team-Innovexia for Team-Innovexia.`,
-    short_title: `GISP`,
+    title: `Demosoap | Natural Handmade soaps made in our Toronto workshop Est. 2004`,
+    description: `Made in Toronto with several years of experience Demosoap has the secret to formulating the perfect soap that cleanses without overly drying and has just the right amount of skin-nourishing natural oils, fragrance and additives. All Demosoaps are certified vegan gluten free kosher hypoallergenic and biodegaradable`,
+    short_title: `DEMOSOAP`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
