@@ -84,7 +84,7 @@ const RecommendedProducts = (prop) => {
                   output = (
                     <div className="mb-3 mb-lg-5" key={index}>
                       <div className="trending-products" key={id}>
-                        <Link to={`/product/${handle}/`} className="">
+                        <Link to={`/products/${handle}/`} className="">
                           <div
                             className="tp-image"
                             style={{
@@ -123,7 +123,7 @@ const RecommendedProducts = (prop) => {
                             </span>
                           </div>
                           <Link
-                            to={`/product/${handle}/`}
+                            to={`/products/${handle}/`}
                             className="clickclack product-name mt-2 d-block"
                             style={{ textDecoration: "none" }}
                           >

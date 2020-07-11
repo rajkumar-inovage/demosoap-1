@@ -15,7 +15,7 @@ const ProductBox = props => {
   return (
     <Col className="col-12 col-md-6 col-lg-3 mb-3 mb-lg-5">
       <div className="trending-products" key={product.node.id}>
-        <Link to={`/product/${product.node.handle}`}>
+        <Link to={`/products/${product.node.handle}`}>
           <div
             className="tp-image"
             style={{
@@ -51,7 +51,7 @@ const ProductBox = props => {
             </span>
           </div>
           <Link
-            to={`/product/${product.node.handle}`}
+            to={`/products/${product.node.handle}`}
             className="clickclack mt--2 d-block"
             style={{ textDecoration: "none" }}
           >

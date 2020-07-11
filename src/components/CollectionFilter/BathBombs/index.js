@@ -61,7 +61,7 @@ const BathBombs = () => {
                     key={index}
                   >
                     <div className="trending-products" key={id}>
-                      <Link to={`/product/${handle}/`} className="">
+                      <Link to={`/products/${handle}/`} className="">
                         <div className="tp-image">
                           {images[0] &&
                             images[0].localFile.childImageSharp.fluid.src && (
@@ -109,7 +109,7 @@ const BathBombs = () => {
                         </div>
 
                         <Link
-                          to={`/product/${handle}/`}
+                          to={`/products/${handle}/`}
                           className="josefin-sans-b mt-2 d-block"
                           style={{ textDecoration: "none" }}
                         >

@@ -26,7 +26,7 @@ const Line_item = props => {
           <div className="column">{imageItem}</div>
           <div className="column">
             <a
-              href={`/product/${String(line_item.title)
+              href={`/products/${String(line_item.title)
                 .toLowerCase()
                 .replace(/\s+/g, "-")}`}
             >

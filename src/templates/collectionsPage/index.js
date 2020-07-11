@@ -306,7 +306,7 @@ const CollectionsPage = ({ data }) => {
                       >
                         <div className={displayClass + " trending-products"}>
                           <div className={imgClass + " productImage"}>
-                            <Link to={`/product/${handle}/`} className="">
+                            <Link to={`/products/${handle}/`} className="">
                               <div className="tp-image">
                                 {images.length &&
                                   images[0].localFile.childImageSharp.original
@@ -365,7 +365,7 @@ const CollectionsPage = ({ data }) => {
                               </div>
 
                               <Link
-                                to={`/product/${handle}/`}
+                                to={`/products/${handle}/`}
                                 className="clickclack d-block product-name"
                                 style={{ textDecoration: "none" }}
                               >
@@ -390,7 +390,7 @@ const CollectionsPage = ({ data }) => {
                                     {description.substring(0, MAX_LENGTH)}...
                                   </p>
                                   <Link
-                                    to={`/product/${handle}/`}
+                                    to={`/products/${handle}/`}
                                     className="more josefin-sans-sb text-decoration-none position-relative"
                                     style={{
                                       fontSize: "1.3rem",
@@ -405,7 +405,7 @@ const CollectionsPage = ({ data }) => {
                                   style={{ minWidth: "150px" }}
                                 >
                                   <Link
-                                    to={`/product/${handle}/`}
+                                    to={`/products/${handle}/`}
                                     className="text-decoration-none px-3 py-3 d-block josefin-sans-b cart-btn border border-dark btns position-relative"
                                     style={{ fontSize: "0.8rem" }}
                                   >
