@@ -93,38 +93,7 @@ const ArticlePage = ({ data }) => {
                     >
                       Blogs
                     </Link>
-                  </li>
-                  <li
-                    className="d-inline-block mx-3 josefin-sans-b"
-                    style={{ fontSize: "1.3rem" }}
-                  >
-                    <button
-                      id="share"
-                      style={{ color: "rgba(0,0,0,0.4)" }}
-                      className="bg-transparent border-0 outline-none"
-                    >
-                      <span className="pr-2 josefin-sans-sb text-dark">
-                        <i className="fa fa-share-alt pr-2"></i>Share
-                      </span>
-                    </button>
-                    <UncontrolledPopover
-                      placement="left"
-                      trigger="legacy"
-                      target="share"
-                    >
-                      <PopoverBody>
-                        <FacebookShareButton url={URL} className="p-1">
-                          <FacebookIcon size={25} round={true} />
-                        </FacebookShareButton>
-                        <TwitterShareButton url={URL} className="p-1">
-                          <TwitterIcon size={25} round={true} />
-                        </TwitterShareButton>
-                        <PinterestShareButton url={URL} className="p-1">
-                          <PinterestIcon size={25} round={true} />
-                        </PinterestShareButton>
-                      </PopoverBody>
-                    </UncontrolledPopover>
-                  </li>
+                  </li> 
                 </ul>
               </div>
             </Col>

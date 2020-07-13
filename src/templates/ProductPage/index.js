@@ -19,15 +19,7 @@ import {
   CarouselItem,
   CarouselControl,
   Modal,
-} from "reactstrap";
-import {
-  FacebookShareButton,
-  PinterestShareButton,
-  TwitterShareButton,
-  FacebookIcon,
-  PinterestIcon,
-  TwitterIcon,
-} from "react-share";
+} from "reactstrap"; 
 import atob from "atob";
 import classnames from "classnames";
 import ReactHtmlParser from "react-html-parser";
@@ -379,37 +371,7 @@ const ProductPage = ({ data }) => {
                 <div className="title-and-share d-flex">
                   <h1 className="clickclack p-0 m-0 flex-grow-1">
                     {product.title}
-                  </h1>
-                  <div className="text-right p-0 m-0">
-                    <button
-                      id="share"
-                      style={{
-                        color: "rgba(0,0,0,0.4)",
-                      }}
-                      className="bg-transparent border-0 outline-none ml-0 ml-sm-0 ml-lg-4 ml-xl-4"
-                    >
-                      <span style={{ color: "#000" }}>
-                        <i className="fa fa-share-alt"></i>
-                      </span>
-                    </button>
-                    <UncontrolledPopover
-                      placement="left"
-                      trigger="legacy"
-                      target="share"
-                    >
-                      <PopoverBody>
-                        <FacebookShareButton url={URL} className="p-1">
-                          <FacebookIcon size={25} round={true} />
-                        </FacebookShareButton>
-                        <TwitterShareButton url={URL} className="p-1">
-                          <TwitterIcon size={25} round={true} />
-                        </TwitterShareButton>
-                        <PinterestShareButton url={URL} className="p-1">
-                          <PinterestIcon size={25} round={true} />
-                        </PinterestShareButton>
-                      </PopoverBody>
-                    </UncontrolledPopover>
-                  </div>
+                  </h1> 
                 </div>
                 <div className="reviews font-1rem d-flex my-3 my-lg-4">
                   <ul

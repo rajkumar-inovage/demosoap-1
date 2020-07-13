@@ -66,6 +66,7 @@ const ProductForm = ({ product }) => {
   return (
     <>
       <h3 className="clickclack product-price">{price}</h3>
+  <span className="weight">Weight: {productVariant.weight} <span style={{ textTransform : 'lowercase'}}>{productVariant.weightUnit}</span></span>
       <p className="josefin-sans mt-3 mb-5">
         {product.description.substring(0, MAX_LENGTH)}&hellip;
       </p>
