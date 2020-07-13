@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import SEO from "../components/seo";
 import { Link, graphql } from "gatsby";
 import ProductList from "../components/recentProduct";
-import banner from "../assets/img/image0-min.jpg";
+import banner from "../assets/img/demo.jpg";
 import shop from "../assets/img/shop.jpg";
 import RecentBlogs from "../components/RecentBlogs";
 import { 

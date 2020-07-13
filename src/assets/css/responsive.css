@@ -45,6 +45,10 @@
 		height: 380px;
 		margin: 10px 0;
 	}
+	.badges {
+		width: 280px;
+		background-size: contain;
+	}
 }
 
 
