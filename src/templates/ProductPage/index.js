@@ -783,43 +783,12 @@ const ProductPage = ({ data }) => {
           </Row>
         </Container>
       </section>
-      <section className="border border-left-0 border-right-0 py-3 py-lg-4 mt-5">
-        <Container>
-          <Row className="mx-0 text-center">
-            <p
-              className="josefin-sans-sb w-100 text-center"
-              style={{ fontSize: "1.2rem" }}
-            >
-              <strong style={{ color: "#000" }}>Categories: </strong>
-              <Link
-                to="/collections/fragrant/"
-                className="text-decoration-none text-dark px-1"
-              >
-                Fragrant
-              </Link>
-              ,
-              <Link
-                to="/collections/recommended-products-seguno/"
-                className="text-decoration-none text-dark px-1"
-              >
-                Recommended products
-              </Link>
-              ,
-              <Link
-                to="/collections/new/"
-                className="text-decoration-none text-dark px-1"
-              >
-                Trending
-              </Link>
-            </p>
-          </Row>
-        </Container>
-      </section>
+      <hr/>
       <section className="mt-5">
         <Container>
           <Row className="mx-0">
             <h2
-              className=" w-100 text-center"
+              className="clickclack w-100 text-center"
               style={{ color: "#000", fontSize: "2.8rem" }}
             >
               We also recommend

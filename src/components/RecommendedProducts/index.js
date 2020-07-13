@@ -11,7 +11,7 @@ const RecommendedProducts = (prop) => {
   const { shopifyCollection } = useStaticQuery(
     graphql`
       query {
-        shopifyCollection(handle: { eq: "recommended-products-seguno" }) {
+        shopifyCollection {
           products {
             handle
             title
