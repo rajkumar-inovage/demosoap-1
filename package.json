@@ -26,6 +26,7 @@
     "gatsby-plugin-sass": "^2.3.2",
     "gatsby-plugin-sharp": "^2.6.9",
     "gatsby-plugin-shopify-buy": "0.0.2",
+    "gatsby-plugin-sitemap": "^2.4.11",
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-query-params": "^1.2.1",
     "gatsby-remark-images-zoom": "^1.1.0",

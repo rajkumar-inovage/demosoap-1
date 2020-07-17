@@ -9,11 +9,13 @@ module.exports = {
     title: `Demosoap | Natural Handmade soaps made in our Toronto workshop Est. 2004`,
     description: `Made in Toronto with several years of experience Demosoap has the secret to formulating the perfect soap that cleanses without overly drying and has just the right amount of skin-nourishing natural oils, fragrance and additives. All Demosoaps are certified vegan gluten free kosher hypoallergenic and biodegaradable`,
     short_title: `DEMOSOAP`,
+    siteUrl: `https://demosoap.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
-    `gatsby-plugin-layout`,
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-layout`, 
     {
       resolve: "gatsby-plugin-mailchimp",
       options: {
@@ -43,6 +45,7 @@ module.exports = {
         "~": path.join(__dirname, "src/"),
       },
     },
+    
     {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
