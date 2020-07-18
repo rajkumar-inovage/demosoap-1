@@ -482,8 +482,7 @@ body .news-letter-form input:focus {
 	transform: rotate(-7deg);
   }
   .style-1 ins {  
-	text-decoration: none;
-	padding: 1em 1em 1em .5em;
+	text-decoration: none; 
   }
   .collectionPrice {
 	  font-size: 14px;
