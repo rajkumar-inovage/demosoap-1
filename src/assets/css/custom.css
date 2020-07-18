@@ -482,14 +482,19 @@ body .news-letter-form input:focus {
 	transform: rotate(-7deg);
   }
   .style-1 ins {  
-	text-decoration: none;
-	padding: 1em 1em 1em .5em;
+	text-decoration: none; 
   }
   .collectionPrice {
 	  font-size: 14px;
 	  position: relative;
 	  top: -10px;
   }
+
+  .modal-content {
+	  align-items: center;
+	  justify-items: center;
+  }
+  .product-zoom {cursor: zoom-out;}
 
 .quantity-input {
 	vertical-align: top;

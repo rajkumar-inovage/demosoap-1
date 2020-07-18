@@ -12,13 +12,9 @@ import {
   Row,
   Col,
   Alert,
-  UncontrolledPopover,
-  PopoverBody,
-  Media,
   Carousel,
   CarouselItem,
-  CarouselControl,
-  Modal,
+  CarouselControl, 
 } from "reactstrap"; 
 import atob from "atob";
 import classnames from "classnames";
@@ -268,6 +264,7 @@ const ProductPage = ({ data }) => {
   const closeModal = () => setModal(false)
 
   const toggleModal = (event, imgSrc) => {
+    event.preventDefault();
     setModalImage(imgSrc)
     setModal(true)
   }
@@ -288,7 +285,7 @@ const ProductPage = ({ data }) => {
       }}
       onClick={closeModal}
     >
-      &times;
+      <i className="fa fa-times" aria-hidden="true"></i> 
     </button>
   )
 
@@ -759,6 +756,15 @@ const ProductPage = ({ data }) => {
           </Row>
         </Container>
       </section>
+
+      <div className={` ${modal === true ? "modal is-active" : "modal"}`}>
+        <div className="modal-background" onClick={closeModal}></div>
+        <div className="modal-content bg-transparent product-zoom"  onClick={closeModal}>
+           <img src={modalImage} />
+        </div>
+
+        {externalCloseBtn}
+      </div>
     </>
   );
 };

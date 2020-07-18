@@ -1,6 +1,7 @@
 import React, { useState, useContext, useEffect, useCallback } from "react";
 import PropTypes from "prop-types";
 import StoreContext from "~/context/store";
+import VariantSelectors from "~/components/variantSelectors"
 
 const ProductForm = ({ product }) => {
   const {
@@ -10,6 +11,7 @@ const ProductForm = ({ product }) => {
   const MAX_LENGTH = 200;
   const variant = { ...initialVariant };
   const [quantity, setQuantity] = useState(1);
+  const [variantP, setVariant] = useState(product.variants[0]);
   const {
     addVariantToCart,
     addVariantToCartAndBuyNow,
@@ -30,6 +32,7 @@ const ProductForm = ({ product }) => {
       return('CA'+variant.compareAtPrice)
     };
   }
+  
 
   //checkout.currencyCode = productVariant.presentmentPrices.edges[1].node.price.currencyCode;
   const checkAvailability = useCallback(
@@ -50,6 +53,24 @@ const ProductForm = ({ product }) => {
   useEffect(() => {
     checkAvailability(product.shopifyId);
   }, [productVariant, checkAvailability, product.shopifyId]);
+
+
+  useEffect(() => {
+    let defaultOptionValues = {}
+    product.options.forEach(selector => {
+        defaultOptionValues[selector.name] = selector.values[0]
+    })
+    setVariant(defaultOptionValues)
+  }, [])
+
+  const handleOptionChange = event => {
+    const { target } = event
+    setVariant(prevState => ({
+        ...prevState,
+        [target.name]: target.value,
+        ...console.log(variantP)
+    }))
+  }
 
   const decreaseQuantity = (event) => {
     event.preventDefault();
@@ -73,7 +94,7 @@ const ProductForm = ({ product }) => {
   return (
     <>
 
-    <div class="style-1">
+    <div className="style-1">
       <del>
         <span className="clickclack amount">{compareAtPrice()}</span>
       </del>
@@ -85,6 +106,15 @@ const ProductForm = ({ product }) => {
       <p className="josefin-sans mt-3 mb-5">
         {product.description.substring(0, MAX_LENGTH)}&hellip;
       </p>
+      {
+          product.options.map(options => (
+              <VariantSelectors
+                  onChange={handleOptionChange}
+                  key={options.id.toString()}
+                  options={options}
+              />
+          ))
+      }
       <div className="row align-items-center">
         <div className="col-auto select-qnty">
           <button
