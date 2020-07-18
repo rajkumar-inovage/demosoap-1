@@ -792,6 +792,7 @@ export const query = graphql`
                sku
                weight
                weightUnit
+               compareAtPrice
                presentmentPrices {
                  edges {
                    node {

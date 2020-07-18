@@ -465,6 +465,32 @@ body .news-letter-form input:focus {
 	line-height: 1.1;
 }
 
+.style-1 del {
+	color: rgba(0, 0, 0, 0.5);
+	text-decoration: none;
+	position: relative;
+  }
+  .style-1 del:before {
+	content: " ";
+	display: block;
+	width: 100%;
+	border-top: 2px solid rgba(255, 0, 0, 0.5);
+	height: 12px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	transform: rotate(-7deg);
+  }
+  .style-1 ins {  
+	text-decoration: none;
+	padding: 1em 1em 1em .5em;
+  }
+  .collectionPrice {
+	  font-size: 14px;
+	  position: relative;
+	  top: -10px;
+  }
+
 .quantity-input {
 	vertical-align: top;
 	padding: 0;

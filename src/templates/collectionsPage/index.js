@@ -61,6 +61,9 @@ const CollectionsPage = ({ data }) => {
     categoryBg = giftBg;
     bgColor = "#f1f1ef";
   }
+  const compared = (price) => {
+    if (price) {return('CA'+price)}
+  }
   
   const getPrice = (price) =>
     Intl.NumberFormat(undefined, {
@@ -360,7 +363,9 @@ const CollectionsPage = ({ data }) => {
                                   }
                                   style={{ fontSize: "1.2rem", color: "#4e4e4e" }}
                                 >
-                                  {getPrice(variants[0].price)}
+                                  
+                                <span className="clickclack style-1 collectionPrice"> <del>{compared(variants[0].compareAtPrice)}</del> </span>
+                                 {getPrice(variants[0].price)}
                                 </span>
                               </div>
 
@@ -452,6 +457,7 @@ export const query = graphql`
         }
         variants {
           price
+          compareAtPrice
         }
         priceRange {
           maxVariantPrice {
