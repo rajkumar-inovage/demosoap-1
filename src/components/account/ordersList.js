@@ -53,17 +53,17 @@ const OrdersList = ({ orders }) => {
       </div>
       <div className={onClickOrder ? "modal is-active" : "modal"}>
         <button
-          class="modal-background"
+          className="modal-background"
           onClick={() => setOnClickOrder(!onClickOrder)}
           aria-label="onClickOrder"
         ></button>
-        <div class="modal-content" style={{ width: "auto", padding: "10px" }}>
-          <section class="modal-card-body">
+        <div className="modal-content" style={{ width: "auto", padding: "10px" }}>
+          <section className="modal-card-body">
             {selectedOrder != null && <Order order={selectedOrder} />}
           </section>
         </div>
         <button
-          class="modal-close is-large"
+          className="modal-close is-large"
           aria-label="close"
           onClick={() => setOnClickOrder(!onClickOrder)}
         ></button>

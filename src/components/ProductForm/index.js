@@ -73,7 +73,7 @@ const ProductForm = ({ product }) => {
   return (
     <>
 
-    <div class="style-1">
+    <div className="style-1">
       <del>
         <span className="clickclack amount">{compareAtPrice()}</span>
       </del>

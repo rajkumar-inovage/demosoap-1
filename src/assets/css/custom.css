@@ -491,6 +491,11 @@ body .news-letter-form input:focus {
 	  top: -10px;
   }
 
+  .modal-content {
+	  align-items: center;
+	  justify-items: center;
+  }
+
 .quantity-input {
 	vertical-align: top;
 	padding: 0;

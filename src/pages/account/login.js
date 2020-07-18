@@ -130,7 +130,7 @@ const LoginForm = () => {
               <div className="columns is-centered">
                 <div className="column is-4 is-centered">
                   {messsageInfo && (
-                    <div class="notification is-success">{messsageInfo}</div>
+                    <div className="notification is-success">{messsageInfo}</div>
                   )}
                   <h2 className=" title has-text-centered josefin-sans-b">Login</h2>
                   <Mutation mutation={CUSTOMER_LOGIN}>

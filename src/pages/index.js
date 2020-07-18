@@ -60,29 +60,29 @@ const IndexPage = ({ data }) => {
         </div>
       </section> 
 
-      <section class="grid-wrapper container my-5"> 
+      <section className="grid-wrapper container my-5"> 
 
-        <div class="grid-boxes a" onClick={(e) => { e.preventDefault(); window.location.href='/collections/essentials/'; }}>
+        <div className="grid-boxes a" onClick={(e) => { e.preventDefault(); window.location.href='/collections/essentials/'; }}>
             <h2>Essentials</h2>
             <p>Our collection of daily use soaps that will help rejuvinate your skin</p> 
         </div> 
  
-        <div class="grid-boxes b"  onClick={(e) => { e.preventDefault(); window.location.href='/collections/gift/'; }}>
+        <div className="grid-boxes b"  onClick={(e) => { e.preventDefault(); window.location.href='/collections/gift/'; }}>
           <h2>Gift Boxes</h2>
           <p>Our soaps make great unique gifts for customers to help brighten up their day, and those around them. </p>
         </div> 
  
-        <div class="grid-boxes c" onClick={(e) => { e.preventDefault(); window.location.href='/collections/donut/'; }}>
+        <div className="grid-boxes c" onClick={(e) => { e.preventDefault(); window.location.href='/collections/donut/'; }}>
           <h2>Donut Soaps</h2>
           <p>Donut shaped soaps that smell amazing and look delicious!</p>
         </div> 
  
-        <div class="grid-boxes d" onClick={(e) => { e.preventDefault(); window.location.href='/collections/bath-bath-bomb/'; }}>
+        <div className="grid-boxes d" onClick={(e) => { e.preventDefault(); window.location.href='/collections/bath-bath-bomb/'; }}>
           <h2>Bath Bombs</h2>
           <p>Indulge and moisturize your skin with our handcrafted bath bomb</p>
         </div> 
  
-        <div class="grid-boxes e" onClick={(e) => { e.preventDefault(); window.location.href='/collections/treat/'; }}>
+        <div className="grid-boxes e" onClick={(e) => { e.preventDefault(); window.location.href='/collections/treat/'; }}>
             <h2>Treats</h2>
             <p>Inspired by desserts each piece is absolutely fun and one of a kind.</p>
         </div>
