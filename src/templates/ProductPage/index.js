@@ -759,7 +759,7 @@ const ProductPage = ({ data }) => {
 
       <div className={` ${modal === true ? "modal is-active" : "modal"}`}>
         <div className="modal-background" onClick={externalCloseBtn}></div>
-        <div className="modal-content bg-transparent"  onClick={closeModal}>
+        <div className="modal-content bg-transparent product-zoom"  onClick={closeModal}>
            <img src={modalImage} />
         </div>
 
