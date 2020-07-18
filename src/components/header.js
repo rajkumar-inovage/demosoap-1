@@ -567,7 +567,7 @@ const Header = ({ siteTitle }) => {
                 <form
                   action="/search"
                   method="GET"
-                  className="col-10 col-lg-6 mx-auto"
+                  className="col-10 col-lg-12 mx-auto"
                 >
                   <input
                     className="input is-large josefin-sans-sb"
