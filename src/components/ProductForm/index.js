@@ -25,12 +25,12 @@ const ProductForm = ({ product }) => {
     style: "currency",
   }).format(variant.price);
 
-  const compareAtPrice = Intl.NumberFormat(undefined, {
-    currency: minVariantPrice.currencyCode,
-    minimumFractionDigits: 2,
-    style: "currency",
-  }).format(variant.compareAtPrice);
- 
+  const compareAtPrice = () => {
+    if (variant.compareAtPrice) {
+      return('CA'+variant.compareAtPrice)
+    };
+  }
+
   //checkout.currencyCode = productVariant.presentmentPrices.edges[1].node.price.currencyCode;
   const checkAvailability = useCallback(
     (productId) => {
@@ -75,10 +75,10 @@ const ProductForm = ({ product }) => {
 
     <div class="style-1">
       <del>
-        <span className="clickclack amount">{compareAtPrice}</span>
+        <span className="clickclack amount">{compareAtPrice()}</span>
       </del>
       <ins>
-        <h3 className="clickclack amount product-price">{price}</h3>
+      <h3 className="clickclack amount product-price">{price}</h3>
       </ins>
     </div>
   <span className="weight">Weight: {productVariant.weight} <span style={{ textTransform : 'lowercase'}}>{productVariant.weightUnit}</span></span>
