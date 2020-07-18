@@ -32,7 +32,21 @@ const ProductForm = ({ product }) => {
       return('CA'+variant.compareAtPrice)
     };
   }
-  
+ 
+ 
+  const variables = () => {  
+    if (product.options[0].values[0] !== "Default Title") { 
+      return (
+        product.options.map(options => (
+            <VariantSelectors
+                onChange={handleOptionChange}
+                key={options.id.toString()}
+                options={options}
+            />
+        ))
+      )
+    }
+  }
 
   //checkout.currencyCode = productVariant.presentmentPrices.edges[1].node.price.currencyCode;
   const checkAvailability = useCallback(
@@ -106,15 +120,7 @@ const ProductForm = ({ product }) => {
       <p className="josefin-sans mt-3 mb-5">
         {product.description.substring(0, MAX_LENGTH)}&hellip;
       </p>
-      {
-          product.options.map(options => (
-              <VariantSelectors
-                  onChange={handleOptionChange}
-                  key={options.id.toString()}
-                  options={options}
-              />
-          ))
-      }
+      {variables()}
       <div className="row align-items-center">
         <div className="col-auto select-qnty">
           <button
