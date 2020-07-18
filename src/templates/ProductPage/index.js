@@ -285,7 +285,7 @@ const ProductPage = ({ data }) => {
       }}
       onClick={closeModal}
     >
-      <i class="fa fa-times" aria-hidden="true"></i> 
+      <i className="fa fa-times" aria-hidden="true"></i> 
     </button>
   )
 
@@ -758,7 +758,7 @@ const ProductPage = ({ data }) => {
       </section>
 
       <div className={` ${modal === true ? "modal is-active" : "modal"}`}>
-        <div className="modal-background" onClick={externalCloseBtn}></div>
+        <div className="modal-background" onClick={closeModal}></div>
         <div className="modal-content bg-transparent product-zoom"  onClick={closeModal}>
            <img src={modalImage} />
         </div>
