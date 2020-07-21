@@ -23,6 +23,7 @@
     "gatsby-plugin-offline": "^2.2.10",
     "gatsby-plugin-performance-metrics": "^1.0.1",
     "gatsby-plugin-react-helmet": "^3.3.2",
+    "gatsby-plugin-robots-txt": "^1.5.1",
     "gatsby-plugin-sass": "^2.3.2",
     "gatsby-plugin-sharp": "^2.6.9",
     "gatsby-plugin-shopify-buy": "0.0.2",
