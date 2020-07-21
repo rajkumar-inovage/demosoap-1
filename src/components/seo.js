@@ -44,6 +44,10 @@ function SEO({ description, lang, meta, title, schemaMarkup }) {
           content: title
         },
         {
+          property: `og:url`,
+          content: 'https://demosoap.com/'
+        },
+        {
           property: `og:image`,
           content: 'https://demosoap.com/static/demo-d872a531fe014e9c264bb691fc5d0c7c.jpg'
         },
