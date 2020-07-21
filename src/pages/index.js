@@ -16,7 +16,7 @@ const IndexPage = ({ data }) => {
   const schema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "Demsoap",
+    "name": "Demosoap",
     "image": "https://demosoap.com/static/demo-d872a531fe014e9c264bb691fc5d0c7c.jpg",
     "@id": "",
     "url": "https://demosoap.com/",

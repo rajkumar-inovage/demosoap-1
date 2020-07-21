@@ -74,7 +74,7 @@ function SEO({ description, lang, meta, title, schemaMarkup }) {
       ].concat(meta)}
     >
       {schemaMarkup && 
-        <script type="application/Id+json">{JSON.stringify(schemaMarkup)}</script>
+        <script type="application/ld+json">{JSON.stringify(schemaMarkup)}</script>
       }
     </Helmet>
   );
