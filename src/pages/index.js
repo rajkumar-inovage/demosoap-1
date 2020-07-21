@@ -13,11 +13,51 @@ import {
 } from 'reactstrap'
 
 const IndexPage = ({ data }) => {
- 
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Demsoap",
+    "image": "https://demosoap.com/static/demo-d872a531fe014e9c264bb691fc5d0c7c.jpg",
+    "@id": "",
+    "url": "https://demosoap.com/",
+    "telephone": "4165363916",
+    "priceRange": "$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "171 E Liberty St",
+      "addressLocality": "Toronto",
+      "addressRegion": "ON",
+      "postalCode": "M6K 3P6",
+      "addressCountry": "CA"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 43.6381221,
+      "longitude": -79.41815609999999
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "12:00",
+      "closes": "19:00"
+    },
+    "sameAs": [
+      "https://www.facebook.com/Demo-Soap-184227641589990",
+      "https://twitter.com/demosoap",
+      "https://instagram.com/demosoap"
+    ]
+  }
  
   return (
     <>
-      <SEO title="Home" />
+      <SEO title="Home" schemaMarkup={schema}/>
       <section className="banner-section">
         <div className="home-banner">
           <Container> 
