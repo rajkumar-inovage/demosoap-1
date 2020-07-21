@@ -45,7 +45,7 @@ function SEO({ description, lang, meta, title, schemaMarkup }) {
         },
         {
           property: `og:image`,
-          content: metaDescription
+          content: 'https://demosoap.com/static/demo-d872a531fe014e9c264bb691fc5d0c7c.jpg'
         },
         {
           property: `og:description`,
@@ -61,11 +61,19 @@ function SEO({ description, lang, meta, title, schemaMarkup }) {
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata.author
+          content: 'Demosoap'
+        },
+        {
+          name: `twitter:image`,
+          content: 'https://demosoap.com/static/demo-d872a531fe014e9c264bb691fc5d0c7c.jpg'
+        },
+        {
+          name: `twitter:site`,
+          content: 'https://demosoap.com/'
         },
         {
           name: `twitter:title`,
-          content: title
+          content: 'Demosoap | Unique natural handmade soaps'
         },
         {
           name: `twitter:description`,

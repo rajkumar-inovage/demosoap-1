@@ -90,6 +90,14 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-plugin-netlify-cache",
+      options: {
+        extraDirsToCache: [
+          "/static"
+        ]
+      }
+    },
+    {
       resolve: `gatsby-plugin-netlify`,
       options: {
         headers: {}, // option to add more headers. `Link` headers are transformed by the below criteria

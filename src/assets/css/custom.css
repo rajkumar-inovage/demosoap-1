@@ -187,6 +187,8 @@ body .navbar-collapse .navbar-nav .nav-item a {
 	transform: rotate3d(0, 0, 1, 0deg) translate3d(0, 0, 0);
 }
 
+.homepage-products .trending-products .add-to-cart .btns {display: none !important;}
+
 .tp-image {
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -518,7 +520,7 @@ body .news-letter-form input:focus {
 
 .trending-products .tp-image {
 	height: auto;
-	min-height: 200px;
+	min-height: 225px;
 }
 
 .product-layout.row a {

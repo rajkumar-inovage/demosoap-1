@@ -18,7 +18,7 @@ const ProductList = ({ data }) => {
           What our customers are in love with right now
         </p>
       </Row>
-      <Row className="mx-0 mt-5">
+      <Row className="mx-0 mt-5 homepage-products">
         {data.allShopifyProduct ? (
           products.map((p, i) => {
             let product = p;
