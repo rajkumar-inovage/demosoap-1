@@ -96,7 +96,7 @@ const RecentBlogs = () => {
                           .split("/")
                           .pop()}/`}
                         style={{ fontSize: "1.2rem", color: "#000" }}
-                        className="josefin-sans-sb d-block mb-0 px-2 mt-3 text-decoration-none"
+                        className="josefin-sans-sb d-block mb-0 px-2 mt-3 mb-3 text-decoration-none"
                       >
                         {title}
                       </Link>
