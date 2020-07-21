@@ -16,6 +16,7 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-layout`, 
+    `gatsby-plugin-remove-serviceworker`,
     `gatsby-plugin-netlify-cache`, 
     {
       resolve: "gatsby-plugin-mailchimp",
@@ -93,7 +94,17 @@ module.exports = {
     {
       resolve: `gatsby-plugin-netlify`,
       options: {
-        headers: {}, // option to add more headers. `Link` headers are transformed by the below criteria
+        headers: {
+          "/*.js": [
+            "cache-control: public, max-age=31536000, immutable",
+          ],
+          "/*.css": [
+            "cache-control: public, max-age=31536000, immutable",
+          ],
+          "/sw.js": [
+            "cache-control: public, max-age=0, must-revalidate",
+          ],
+        },
         allPageHeaders: [], // option to add headers for all pages. `Link` headers are transformed by the below criteria
         mergeSecurityHeaders: true, // boolean to turn off the default security headers
         mergeLinkHeaders: true, // boolean to turn off the default gatsby js headers
