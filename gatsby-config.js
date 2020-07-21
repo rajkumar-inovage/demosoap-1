@@ -16,6 +16,7 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-layout`, 
+    `gatsby-plugin-netlify-cache`, 
     {
       resolve: "gatsby-plugin-mailchimp",
       options: {
@@ -88,15 +89,7 @@ module.exports = {
         display: `minimal-ui`,
         icon: `src/assets/img/favicon.png`,
       },
-    },
-    {
-      resolve: "gatsby-plugin-netlify-cache",
-      options: {
-        extraDirsToCache: [
-          "/static"
-        ]
-      }
-    },
+    }, 
     {
       resolve: `gatsby-plugin-netlify`,
       options: {
