@@ -143,7 +143,7 @@ body .navbar-collapse .navbar-nav .nav-item a {
 }
 
 .add-to-cart .btns {
-	padding: 8px 12px;
+	padding: 12px 20px;
 	display: inline-block;
 	vertical-align: bottom;
 	background-color: #fff;
@@ -200,7 +200,7 @@ body .navbar-collapse .navbar-nav .nav-item a {
 	position: absolute;
 	bottom: -70px;
 	margin-left: 50%;
-	left: -25%;
+	left: -15%;
 	transform: translate(0%, -50%);
 	transition: all 0.3s;
 }
