@@ -35,6 +35,8 @@ const ProductPage = ({ data }) => {
   );
   const productHandle = product.handle;
   const productTitle = product.title;
+  const productSku = product.sku;
+  const productPrice = product.price;
   const productImg = product.images.length ? product.images[0].originalSrc : "";
   const currentImage = product.images[0];
   const reviewsPerPage = 5;
@@ -289,6 +291,31 @@ const ProductPage = ({ data }) => {
     </button>
   )
 
+  const schema = {
+    "@context": "https://schema.org/", 
+    "@type": "Product", 
+    "name": productTitle,
+    "image": currentImage,
+    "sku": productSku,
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "CAD",
+      "price": productPrice,
+      "availability": "https://schema.org/InStock",
+      "itemCondition": "https://schema.org/NewCondition"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": totalRating
+    },
+    "review": {
+      "@type": "Review",
+      "reviewBody": "",
+      "author": {"@type": "Person", "name": ""}
+    }
+  }
+
+
   const slides = product.images.map(image => {
     return (
       <CarouselItem
@@ -320,7 +347,7 @@ const ProductPage = ({ data }) => {
   
   return (
     <>
-      <SEO title={product.title} description={product.description} />
+      <SEO title={product.title} description={product.description} schemaMarkup={schema}  />
       <section className="inner-pages-banner ">
         <Container>
           <Row className="mx-0 pt-3 pt-lg-5">

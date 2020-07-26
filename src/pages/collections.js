@@ -5,11 +5,29 @@ import SEO from "~/components/seo"
 import AllCollections from "../components/AllCollections"
 
 const Collections = (data) => {
+
+  const schema = {
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "item":
+      {
+       "@id": "https://demosoap.com/collections",
+       "name": "Collections"
+       }
+     },
+    ]   
+  }
+  
   return(
     <>
 
 
-    <SEO title="Collections" />
+    <SEO title="Collections" schemaMarkup={schema}/>
     <section className="inner-pages-banner py-100" style={{backgroundColor:'#e7e7e7'}}>
       <Container className="py-0 py-lg-5">
         <Row className="mx-0">

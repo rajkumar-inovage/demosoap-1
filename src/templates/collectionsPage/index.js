@@ -39,6 +39,7 @@ const CollectionsPage = ({ data }) => {
   let bgColor;
 
   const title = data.shopifyCollection.title;
+  const url = data.shopifyCollection.url;
   if (title == "Fragrant") { 
     categoryBg = fragrantBg;
     bgColor = "#eeeff3";
@@ -148,9 +149,32 @@ const CollectionsPage = ({ data }) => {
     }, 1500);
   };
 
+
+  const schema = {
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement":
+    [
+     {
+      "@type": "ListItem",
+      "position": 1,
+      "item":
+      {
+       "@id": "https://demosoap.com/collections",
+       "name": "Collections"
+       }
+     }, {
+      "@type": "ListItem",
+      "position": 2,
+      "name": title,
+      "item": url
+     }
+    ]
+  }
+
   return (
     <>
-      <SEO title={data.shopifyCollection.title} />
+      <SEO title={data.shopifyCollection.title} schemaMarkup={schema} />
       <section
         className="collection-banner py-100"
         style={{
