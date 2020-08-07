@@ -2,6 +2,7 @@ import React, { useState, useContext, useEffect, useCallback } from "react";
 import PropTypes from "prop-types";
 import StoreContext from "~/context/store";
 import VariantSelectors from "~/components/variantSelectors"
+import $ from "jquery";
 
 const ProductForm = ({ product }) => {
   const {
@@ -100,7 +101,10 @@ const ProductForm = ({ product }) => {
   };
   const handleAddToCart = (e) => {
     e.preventDefault();
-    addVariantToCart(productVariant.shopifyId, quantity);
+    addVariantToCart(productVariant.shopifyId, quantity)
+    .then(()=>{
+      $("#minicart").toggleClass("opened");
+    });
   };
   const handleBuyNow = () => {
     addVariantToCartAndBuyNow(productVariant.shopifyId, quantity);
