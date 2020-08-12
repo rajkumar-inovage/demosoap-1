@@ -590,30 +590,13 @@ const Header = ({ siteTitle }) => {
                   <span className="money price">{`$${subtotalPrice}`}</span>
                 </p>
                 <div className="cart__actions">
-                  <p className="cart__condition checkbox-wrapper">
-                    <input
-                      type="checkbox"
-                      className="cart__agree"
-                      id="cart__agree"
-                      onChange={(e) => agreed(e)}
-                      data-message="You must agree with the terms and conditions of sales to check out."
-                    />
-                    <label htmlFor="cart__agree">
-                      I agree with the{" "}
-                      <Link to="/page/privacy-policy">
-                        terms and conditions
-                      </Link>
-                      .
-                    </label>
-                  </p>
                   <div className="cart__btns d-flex">
                     <Link to="/cart/" className="col-12 col-md-6 btn btn-cart">
                       View cart
                     </Link>
                     <button
                       onClick={handleCheckout}
-                      className="col-12 col-md-6 btn-checkout"
-                      disabled={!tncAgree}
+                      className="col-12 col-md-6 btn-checkout" 
                     >
                       Check out
                     </button>
