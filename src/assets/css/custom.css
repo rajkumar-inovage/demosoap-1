@@ -50,7 +50,7 @@ a {
 	color: rgb(70, 132, 99);
 }
 .bg-secondary {
-	background-color: rgba(239, 235, 222, 0.95) !important;
+	background-color: white !important;
 	padding: 30px
 }
 .navbar-brand {
@@ -99,9 +99,9 @@ body .navbar-collapse .navbar-nav .nav-item a {
 	font-size: 1rem;
 }
 .home-slider {
-	min-height: 650px;
+	min-height: 750px;
 	background-size: cover;
-	background-position: center center;
+	background-position: center bottom;
 	background-repeat: no-repeat;
 	position: relative;
 }
@@ -495,7 +495,7 @@ body .news-letter-form input:focus {
 .slider-content-box h1 {
 	font-size: 2rem;
 	border-bottom: 2px solid #E6B8AF;
-	width: 100%;
+	width: 80%;
 	margin: 0 auto;
 	padding-bottom: 5px;
 	margin-bottom: 10px;

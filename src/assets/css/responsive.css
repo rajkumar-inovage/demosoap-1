@@ -125,7 +125,7 @@
 	}
 }
 @media (min-width: 768px) { 
-	.slider-content-box h1 { width: 100%; }
+	.slider-content-box h1 { width: 80%; }
 	.slider-inner-content {
 		width: 100%;
 		margin: 0 auto;

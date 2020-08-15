@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import SEO from "../components/seo";
 import { Link, graphql } from "gatsby";
 import ProductList from "../components/recentProduct";
-import banner from "../assets/img/demo-soap-toronto.jpg";
+import banner from "../assets/img/demo-soap-toronto.webp";
 import shop from "../assets/img/shop.jpg";
 import RecentBlogs from "../components/RecentBlogs";
 import { 
@@ -66,15 +66,10 @@ const IndexPage = ({ data }) => {
               style={{ backgroundImage: `url(${banner})` }}
             >
               <div className="slider-content">
-                <div className="button-box"></div>
-                <div
-                  className="bg-secondary slider-content-box josefin-sans text-center rounded position-absolute"
-                  style={{
-                    top: "65%",
-                    left: "50%",
-                    transform: "translate(-50%,-50%)",
-                  }}
-                >
+              </div>
+              
+            </div>
+          <div className="bg-secondary slider-content-box josefin-sans text-center rounded">
                   <h1 className="clickclack primary-color" style={{ fontSize: "2rem" }}>
                     Handcrafted & locally made!
                   </h1>
@@ -83,20 +78,10 @@ const IndexPage = ({ data }) => {
                       We create unique soaps with organic natural and ethical
                       ingredients made in Toronto est.2004
                     </p>
-                    <div className="btn-box mt-4">
-                      <Link
-                        className="btn bdr-btn text-uppercase josefin-sans-sb"
-                        style={{ fontSize: "1rem", color: "#000" }}
-                        to="/collections/essentials/"
-                      >
-                        SHOP NOW
-                      </Link>
-                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
           </Container>
+
         </div>
       </section> 
 
