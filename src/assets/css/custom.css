@@ -693,7 +693,8 @@ body .visual_contact_form input {
 }
 .grid-boxes h2 {
 	margin-bottom: 0;
-	font-weight: 600;
+    font-weight: 400;
+    font-family: 'click-clack', sans-serif;
 }
 .grid-boxes p {
 	font-size: 1.2em;
@@ -1483,4 +1484,8 @@ body .visual_contact_form input {
     pointer-events: none;
     opacity: .5;
     cursor: default;
+}
+.navbar-light .navbar-nav .nav-link {
+	font-size: 1.1em;
+	font-family: 'click-clack', sans-serif;
 }

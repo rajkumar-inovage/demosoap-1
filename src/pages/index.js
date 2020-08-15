@@ -120,10 +120,10 @@ const IndexPage = ({ data }) => {
         <Container>
           <div className="jumbotron text-center py-3 py-lg-5 bg-light" style={{ borderRadius: '10px'}}>
             <h2
-              className="josefin-sans-sb mb-3"
+              className="clickclack mb-3"
               style={{ fontSize: "2rem", color: "#000" }}
             >
-              All products are:
+              All our products are:
             </h2>
             <p
               className="text-uppercase josefin-sans"
