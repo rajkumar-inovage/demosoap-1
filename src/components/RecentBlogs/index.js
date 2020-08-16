@@ -42,10 +42,10 @@ const RecentBlogs = () => {
     <Container>
       <Row className="m-0 text-center">
         <h2
-          className="josefin-sans-b w-100 mb-2"
+          className="clickclack w-100 mb-2"
           style={{ fontSize: "2.5rem", color: "#000" }}
         >
-          Our Blogs
+          Our Blog
         </h2>
       </Row>
       <Row className="mx-0 mt-3 mt-lg-5">

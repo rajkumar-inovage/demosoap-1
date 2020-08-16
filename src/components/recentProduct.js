@@ -9,12 +9,12 @@ const ProductList = ({ data }) => {
     <Container>
       <Row className="m-0 text-center">
         <h2
-          className="josefin-sans-sb w-100 mb-2"
+          className="clickclack w-100 mb-2"
           style={{ fontSize: "2.5rem", color: "#000" }}
         >
           Trending Products
         </h2>
-        <p className="josefin-sans w-100" style={{ fontSize: "1.4rem" }}>
+        <p className="josefin-sans w-100" style={{ fontSize: "1.5rem" }}>
           What our customers are in love with right now
         </p>
       </Row>
