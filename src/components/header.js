@@ -342,16 +342,6 @@ const Header = ({ siteTitle }) => {
                       <i className="fa fa-search" aria-hidden="true"></i>
                     </span>
                   </div>
-                  <div className="navbar-item d-none d-lg-inline-block">
-                    <Link aria-label="My Account" to="/account/login">
-                      <span className="is-size-5 has-text-dark">
-                        <i
-                          className="fa fa-user-circle-o"
-                          aria-hidden="true"
-                        ></i>
-                      </span>
-                    </Link>
-                  </div>
                   <div className="navbar-item d-inline-block">
                     <button
                       aria-label="Cart"
