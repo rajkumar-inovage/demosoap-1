@@ -170,7 +170,7 @@ body .navbar-collapse .navbar-nav .nav-item a {
 	-webkit-transform: rotate3d(0, 0, 1, 0deg) translate3d(0, 0, 0);
 	transform: rotate3d(0, 0, 1, 0deg) translate3d(0, 0, 0);
 }
-.homepage-products .trending-products .add-to-cart .btns {
+.homepage-products .trending-products .add-to-cart .btns, .hide_me {
 	display: none !important;
 }
 .tp-image {
@@ -1488,4 +1488,9 @@ body .visual_contact_form input {
 .navbar-light .navbar-nav .nav-link {
 	font-size: 1.1em;
 	font-family: 'click-clack', sans-serif;
+}
+.not-vegan {
+    width: 253px;
+    background-position: right;
+    height: 90px;
 }

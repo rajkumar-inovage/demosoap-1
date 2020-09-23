@@ -315,6 +315,8 @@ const ProductPage = ({ data }) => {
     }
   }
 
+  const vegan_products = (productID == 4307903283309 || productID == 4308712390765);
+
 
   const slides = product.images.map(image => {
     return (
@@ -428,8 +430,8 @@ const ProductPage = ({ data }) => {
                   </span>
                 </div>
                 <ProductForm product={product} />
-                <div className={"badges my-3"}>
-                  <span>Vegan, Natural, Organic & Not tested on animals</span>
+                  <div className={'badges my-3 ' + (vegan_products ? 'not-vegan' : '' )} > 
+                    <span><span className={(vegan_products ? 'hide_me' : '' )}>Vegan,</span> Natural, Organic & Not tested on animals</span>
                 </div>
                 <AddToCompare
                   className="row align-items-center"
