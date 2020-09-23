@@ -1490,7 +1490,8 @@ body .visual_contact_form input {
 	font-family: 'click-clack', sans-serif;
 }
 .not-vegan {
-    width: 253px;
+    width: 253px !important;
     background-position: right;
-    height: 90px;
+	height: 90px;
+	background-size: inherit !important;
 }
