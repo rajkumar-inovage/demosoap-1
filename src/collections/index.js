@@ -1,10 +1,5 @@
 import React, { useState } from "react";
-import { Container, Row, Col, Tooltip } from "reactstrap";
-import { useStaticQuery, graphql, Link } from "gatsby";
-import Layout from "../components/layout";
-import SEO from "../components/seo";
-import s3 from "../assets/img/s3.jpg";
-import s4 from "../assets/img/s4.jpg";
+import { Container, Row} from "reactstrap";
 
 export default props => {
   return (

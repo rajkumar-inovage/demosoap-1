@@ -58,6 +58,9 @@ const CollectionsPage = ({ data }) => {
   } else if (title == "Treat") {
     categoryBg = treatsBg;
     bgColor = "#eae6e6";
+  } else if (title == "Skin") {
+    categoryBg = giftBg;
+    bgColor = "#f1f1ef";
   } else if (title == "Gift") {
     categoryBg = giftBg;
     bgColor = "#f1f1ef";
