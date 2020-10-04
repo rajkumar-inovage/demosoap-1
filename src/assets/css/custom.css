@@ -1495,3 +1495,10 @@ body .visual_contact_form input {
 	height: 90px;
 	background-size: inherit !important;
 }
+
+.out-of-stock {
+	font-weight: bold;
+	text-align: center;
+	color: #e81313;
+	margin: 10px 0 15px 0;
+}

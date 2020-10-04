@@ -162,13 +162,13 @@ const ProductForm = ({ product }) => {
               border: "1px solid #ffcc33",
               transition: "all 0.3s",
             }}
-            onClick={handleBuyNow}
+            onClick={(available) ? handleBuyNow : null}
           >
             BUY IT NOW
           </button>
         </div>
       </div>
-      {!available && <p>This Product is out of Stock!</p>}
+      {!available && <p className={"out-of-stock"}>This Product is out of Stock!</p>}
     </>
   );
 };
