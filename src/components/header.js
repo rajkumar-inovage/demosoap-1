@@ -248,7 +248,7 @@ const Header = ({ siteTitle }) => {
         >
           <Container>
             <div className="row no-gutters w-100">
-              <div className="col col-p-40 col-lg-p-60 d-flex flex-wrap align-self-center align-items-center justify-content-start order-lg-1">
+              <div className="col col-p-90 col-lg-p-70 d-flex flex-wrap align-self-center align-items-center justify-content-start order-lg-1">
                 <Navbar light={true} className="bg-transparent p-0">
                   <NavbarToggler
                     onClick={toggleMobileMenu}
@@ -350,7 +350,7 @@ const Header = ({ siteTitle }) => {
                   />
                 </Link>
               </div>
-              <div className="col col-p-20 col-lg-p-20 d-flex flex-wrap align-self-center align-items-center justify-content-end order-lg-2">
+              <div className="col col-md-2 col-lg-1 d-flex flex-wrap align-self-center align-items-center justify-content-end order-lg-2">
                 <div className="navbar-end d-block d-lg-flex text-center pb-0">
                   <div className="navbar-item search-icon d-inline-block">
                     <span
@@ -495,6 +495,15 @@ const Header = ({ siteTitle }) => {
                   </li>
                   <li className="listitem">
                     <Link
+                        to="/collections/skin/"
+                        className="josefin-sans"
+                        onClick={closeNav}
+                    >
+                      <span className="site-nav__link">Skin</span>
+                    </Link>
+                  </li>
+                  <li className="listitem">
+                    <Link
                       to="/collections/gift/"
                       className="josefin-sans"
                       onClick={closeNav}
@@ -597,7 +606,7 @@ const Header = ({ siteTitle }) => {
       </div>
       <div className="minicart__overlay" onClick={toggleMiniCart}>
         <div className="cart__message">
-          Free Shipping on All Orders Over $75
+          Free Shipping on All Orders Over $45
         </div>
       </div>
     </>

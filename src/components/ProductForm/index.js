@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect, useCallback } from "react";
 import PropTypes from "prop-types";
 import StoreContext from "~/context/store";
-import VariantSelectors from "~/components/variantSelectors"
+import VariantSelector from "~/components/variantSelectors"
 import $ from "jquery";
 
 const ProductForm = ({ product }) => {
@@ -19,8 +19,9 @@ const ProductForm = ({ product }) => {
     client,
     //checkout,
   } = useContext(StoreContext);
+  const hasVariants = product.variants.length > 1;
   const productVariant =
-    client.product.helpers.variantForOptions(product, variant) || variant;
+      client.product.helpers.variantForOptions(product, variant) || variant;
   const [available, setAvailable] = useState(productVariant.availableForSale);
   const price = Intl.NumberFormat(undefined, {
     currency: minVariantPrice.currencyCode,
@@ -32,22 +33,20 @@ const ProductForm = ({ product }) => {
     if (variant.compareAtPrice) {
       return('CA'+variant.compareAtPrice)
     };
-  }
+  };
  
  
-  const variables = () => {  
-    if (product.options[0].values[0] !== "Default Title") { 
-      return (
-        product.options.map(options => (
-            <VariantSelectors
+  const variables = hasVariants
+      ? product.options.map(option => {
+        return (
+            <VariantSelector
                 onChange={handleOptionChange}
-                key={options.id.toString()}
-                options={options}
+                key={option.id.toString()}
+                option={option}
             />
-        ))
-      )
-    }
-  }
+        )
+      })
+      : null;
 
   //checkout.currencyCode = productVariant.presentmentPrices.edges[1].node.price.currencyCode;
   const checkAvailability = useCallback(
@@ -101,6 +100,7 @@ const ProductForm = ({ product }) => {
   };
   const handleAddToCart = (e) => {
     e.preventDefault();
+    console.dir(productVariant);
     addVariantToCart(productVariant.shopifyId, quantity)
     .then(()=>{
       $("#minicart").toggleClass("opened");
@@ -124,7 +124,7 @@ const ProductForm = ({ product }) => {
       <p className="josefin-sans mt-3 mb-5">
         {product.description.substring(0, MAX_LENGTH)}&hellip;
       </p>
-      {variables()}
+      {variables}
       <div className="row align-items-center">
         <div className="col-auto select-qnty">
           <button

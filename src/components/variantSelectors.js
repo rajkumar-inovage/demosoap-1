@@ -2,7 +2,7 @@ import React from "react"; /* eslint-disable */
 import PropTypes from "prop-types";
 
 const VariantSelector = props => {
-  const { options } = props;
+  const { option } = props;
   return (
     <div className="field is-horizontal">
       <div className="field-label is-normal">
@@ -10,19 +10,19 @@ const VariantSelector = props => {
           className="label"
           style={{ position: "absolute", paddingRight: "5px" }}
         >
-          {options.name} :{" "}
+          {option.name} :{" "}
         </label>
       </div>
       <div className="field-body">
         <div className="select">
           <select
             onChange={props.onChange}
-            name={options.name}
-            key={options.id}
+            name={option.name}
+            key={option.id}
           >
-            {options.values.map(value => (
+            {option.values.map(value => (
               <option
-                key={`${options.name}-${value}`}
+                key={`${option.name}-${value}`}
                 value={value}
                 className="is-medium"
               >
