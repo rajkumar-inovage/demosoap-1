@@ -6,13 +6,7 @@ import $ from "jquery";
 import StoreContext from "~/context/store";
 import logo from "../assets/img/demosoap-logo_x100.png";
 import stickyLogo from "../assets/img/demosoap-logo_x70.png";
-import {
-  Container,
-  Navbar,
-  NavbarToggler,
-  Nav,
-  NavItem,
-} from "reactstrap";
+import { Container, Navbar, NavbarToggler, Nav, NavItem } from "reactstrap";
 
 const countQuantity = (lineItems) => {
   let quantity = 0;
@@ -35,13 +29,13 @@ const Header = ({ siteTitle }) => {
   const handleRemove = (event, lineItemId) => {
     event.preventDefault();
     removeLineItem(client, checkout.id, lineItemId);
-  }; 
+  };
   const handleCheckout = () => {
     window.open(checkout.webUrl);
   };
   const lineItems = checkout.lineItems;
   const subtotalPrice = checkout.subtotalPrice;
-  useEffect(() => { 
+  useEffect(() => {
     if (isBrowser) {
       $(window).scroll(function() {
         var sticky = $(".sticky"),
@@ -70,10 +64,10 @@ const Header = ({ siteTitle }) => {
     setModal(false);
   };
   const toggleMiniCart = () => {
-    $("#minicart").toggleClass('opened');
+    $("#minicart").toggleClass("opened");
   };
   const toggleMobileMenu = () => {
-    $("#mobile-menu").toggleClass('opened');
+    $("#mobile-menu").toggleClass("opened");
   };
   const agreed = (e) => {
     agreeTNC(e.target.checked);
@@ -178,9 +172,9 @@ const Header = ({ siteTitle }) => {
                       </NavItem>
                       <NavItem className="mx-3 my-0 d-inline-block py-md-3 py-lg-0">
                         <Link
-                            to="/collections/gift/"
-                            onClick={closeNav}
-                            className="space-1 p-sm-0 p-lg-0 p-xl-0 nav-link "
+                          to="/collections/gift/"
+                          onClick={closeNav}
+                          className="space-1 p-sm-0 p-lg-0 p-xl-0 nav-link "
                         >
                           Gift
                         </Link>
@@ -214,7 +208,7 @@ const Header = ({ siteTitle }) => {
                     >
                       <i className="fa fa-search" aria-hidden="true"></i>
                     </span>
-                  </div> 
+                  </div>
                   <div className="navbar-item d-inline-block">
                     <button
                       aria-label="Cart"
@@ -314,9 +308,9 @@ const Header = ({ siteTitle }) => {
                       </NavItem>
                       <NavItem className="mx-3 my-0 d-inline-block py-md-3 py-lg-0">
                         <Link
-                            to="/collections/skin/"
-                            onClick={closeNav}
-                            className="space-1 p-sm-0 p-lg-0 p-xl-0 nav-link "
+                          to="/collections/skin/"
+                          onClick={closeNav}
+                          className="space-1 p-sm-0 p-lg-0 p-xl-0 nav-link "
                         >
                           Skin
                         </Link>
@@ -495,6 +489,15 @@ const Header = ({ siteTitle }) => {
                   </li>
                   <li className="listitem">
                     <Link
+                      to="/collections/skin/"
+                      className="josefin-sans"
+                      onClick={closeNav}
+                    >
+                      <span className="site-nav__link">Skin</span>
+                    </Link>
+                  </li>
+                  <li className="listitem">
+                    <Link
                       to="/collections/gift/"
                       className="josefin-sans"
                       onClick={closeNav}
@@ -511,7 +514,7 @@ const Header = ({ siteTitle }) => {
                     </p>
                     <p className="mb-0">
                       <a href="tel:+12(0)12-345-678" onClick={closeNav}>
-                      (416) 536-3916
+                        (416) 536-3916
                       </a>
                     </p>
                   </li>
@@ -584,7 +587,7 @@ const Header = ({ siteTitle }) => {
                     </Link>
                     <button
                       onClick={handleCheckout}
-                      className="col-12 col-md-6 btn-checkout" 
+                      className="col-12 col-md-6 btn-checkout"
                     >
                       Check out
                     </button>
