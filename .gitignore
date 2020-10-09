@@ -3,5 +3,7 @@ node_modules
 .vscode
 public
 .idea
-
+.env.development
+.env.production
+demosoap.code-workspace
 package-lock.json

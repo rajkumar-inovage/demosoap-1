@@ -19,8 +19,8 @@ const ProductForm = ({ product }) => {
     client,
     //checkout,
   } = useContext(StoreContext);
-  const productVariant =
-    client.product.helpers.variantForOptions(product, variant) || variant;
+  const [productVariant, setProductVariant] =
+  useState(client.product.helpers.variantForOptions(product, variant) || variant);
   const [available, setAvailable] = useState(productVariant.availableForSale);
   const price = Intl.NumberFormat(undefined, {
     currency: minVariantPrice.currencyCode,
@@ -33,8 +33,6 @@ const ProductForm = ({ product }) => {
       return('CA'+variant.compareAtPrice)
     };
   }
- 
- 
   const variables = () => {  
     if (product.options[0].values[0] !== "Default Title") { 
       return (
@@ -80,11 +78,14 @@ const ProductForm = ({ product }) => {
 
   const handleOptionChange = event => {
     const { target } = event
+    const newVariant = product.variants.find(
+      (variant) => variant.title === target.value
+    )
     setVariant(prevState => ({
         ...prevState,
         [target.name]: target.value,
-        ...console.log(variantP)
     }))
+    setProductVariant(newVariant);
   }
 
   const decreaseQuantity = (event) => {
