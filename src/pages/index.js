@@ -165,8 +165,8 @@ const IndexPage = ({ data }) => {
                   className="schedule josefin-sans mt-3 mt-lg-5 d-none"
                   style={{ fontSize: "1.3rem" }}
                 >
-                  Mon - Fri : 12–7p.m. <br />
-                  Sat - Sun 11a.m.–5p.m.
+                  Mon - Fri : 12–6p.m. <br />
+                  Sat - Sun 12a.m.–5p.m.
                 </div>
                 <div className="btn-box mt-4">
                   <Link
