@@ -154,6 +154,7 @@ body .navbar-collapse .navbar-nav .nav-item a {
 
 .search-icon {
   cursor: pointer;
+  margin: 4px 15px;
 }
 
 .bdr-btn:hover {
