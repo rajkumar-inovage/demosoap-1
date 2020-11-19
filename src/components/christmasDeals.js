@@ -49,7 +49,6 @@ const ChristmasDeals = () => {
       `
     ),
     { edges: products } = data.allShopifyProduct
-  console.log(data, products)
   return (
     <Container>
       <Row className='m-0 text-center'>
