@@ -31,8 +31,8 @@ const ChristmasDeals = () => {
                   id
                   localFile {
                     childImageSharp {
-                      fluid(maxWidth: 186) {
-                        ...GatsbyImageSharpFluid_noBase64
+                      fluid{
+                        ...GatsbyImageSharpFluid_withWebp_tracedSVG
                       }
                     }
                   }
